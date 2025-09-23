@@ -1,4 +1,1258 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Russo+One&family=Roboto:wght@400;700&display=swap');
+
+/* Reseteo básico y fuentes */
+:root {
+    --color-red: #ff0000;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-light: #f4f4f4;
+    --color-gray-medium: #666666;
+    --color-gray-dark: #333333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    overflow-x: hidden; /* Forza la eliminación del scroll horizontal */
+}
+
+h1, h2, h3 {
+    font-family: 'Russo One', sans-serif;
+}
+
+/* Contenedor principal */
+.header {
+    width: 100%;
+}
+
+.featured-images, .learn-more, .footer {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* --- Cabecera --- */
+.header {
+    background: url('https://via.placeholder.com/1920x600.png?text=Persona+con+megáfono+(B/N)') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    min-height: 50vh; /* Altura mínima para visualización */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* --- Nueva Cabecera --- */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--color-black);
+    position: relative;
+    z-index: 2;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.header-bottom {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex; /* Menú siempre visible */
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 30px; /* Espacio entre elementos del menú */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    color: var(--color-red);
+    border-bottom-color: var(--color-red);
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+    font-size: 1.2rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.portada-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Secciones Principales --- */
+/* El padding ahora se gestiona por sección con la clase .container */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-images .container h2, .learn-more .container h2, .artist-section .container h2, .blog-section .container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Carrusel (diseño básico) */
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Permite scroll horizontal */
+    gap: 20px;
+    padding-bottom: 20px; /* Espacio para la barra de scroll */
+}
+
+.carousel img {
+    max-width: 80%;
+    flex-shrink: 0;
+}
+
+/* Sección "Conocé más" */
+.columns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.column {
+    text-align: center;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.column h3 {
+    font-size: 1.5rem;
+    color: var(--color-red);
+    margin-bottom: 10px;
+}
+
+/* --- Pie de página --- */
+.footer {
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.social-media a {
+    color: var(--color-white);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--color-red);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: var(--color-red);
+    text-decoration: none;
+}
+
+/* --- Responsive con Flexbox --- */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .columns-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .column-link {
+        width: 32%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    /* Estilos de cabecera antiguos eliminados */
+}
+
+/* --- Estilos de Página de Galería (Versión Constructivista Desordenada) --- */
+
+body {
+    background-color: var(--color-gray-light); /* Un gris muy claro como base */
+}
+
+.gallery-section {
+    position: relative;
+    padding: 4rem 2rem;
+    overflow: hidden; /* Para que los elementos de fondo no se salgan */
+}
+
+/* Elementos decorativos de fondo */
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-red);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.gallery-section::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: -10%;
+    width: 40%;
+    height: 10px;
+    background-color: var(--color-black);
+    transform: rotate(-45deg);
+    z-index: 0;
+}
+
+.gallery-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--color-gray-dark);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--color-gray-dark);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-grid {
+    column-count: 2;
+    column-gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background-color: var(--color-black);
+    border: 5px solid var(--color-black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: rotate(2deg) scale(1.02); /* Efecto "desordenado" al pasar el mouse */
+    box-shadow: 10px 10px 0px var(--color-red);
+    z-index: 10;
+}
+
+.gallery-item a {
+    display: block;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.4s;
+}
+
+.gallery-item .gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--color-white);
+    padding: 25px; /* Aumentado el padding */
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+    max-height: 80%; /* Limita la altura máxima */
+    overflow-y: auto; /* Añade scroll si el contenido es muy largo */
+}
+
+.gallery-item:hover .gallery-item-info {
+    transform: translateY(0);
+}
+
+.gallery-item:hover img {
+    opacity: 0.6;
+}
+
+.gallery-item-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem; /* Reducido */
+    color: var(--color-red);
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+}
+
+.gallery-item-info p {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 0.9rem; /* Reducido */
+    line-height: 1.4;
+}
+
+/* Responsive para la galería */
+@media (min-width: 768px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-grid {
+        column-count: 4;
+    }
+}
+
+/* --- Carrusel Simple --- */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.simple-carousel {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    gap: 20px; /* Espacio entre imágenes */
+    padding: 10px 0;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+}
+
+.simple-carousel::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Opera */
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.carousel-btn img {
+    width: 80px; /* Ajusta el tamaño de las flechas */
+    height: auto;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-black);
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    display: block;
+    height: 250px;
+    width: auto;
+    transition: opacity 0.4s;
+}
+
+.carousel-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--color-white);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+    text-align: center;
+}
+
+.carousel-item:hover .carousel-item-info {
+    transform: translateY(0);
+}
+
+.carousel-item:hover img {
+    opacity: 0.4;
+}
+
+.carousel-item-info h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: var(--color-red);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Custom Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--color-white);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Artist Section */
+.search-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#artist-search {
+    padding: 10px;
+    width: 50%;
+    max-width: 400px;
+    border: 2px solid var(--color-gray-dark);
+    font-size: 1rem;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.artist-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-black);
+    cursor: pointer;
+    border: 2px solid var(--color-black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0px var(--color-red);
+}
+
+.artist-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s;
+}
+
+.artist-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--color-white);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+    text-align: center;
+}
+
+.artist-item:hover .artist-item-info {
+    transform: translateY(0);
+}
+
+.artist-item:hover img {
+    opacity: 0.4;
+}
+
+.artist-item-info h3 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-red);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.artist-lightbox-content {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.artist-lightbox-image-container {
+    flex: 1;
+}
+
+.artist-lightbox-text-container {
+    flex: 2;
+}
+
+#lightbox-artist-img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+#lightbox-artist-name {
+    font-size: 2.5rem;
+    color: var(--color-red);
+    margin-bottom: 20px;
+}
+
+#lightbox-artist-bio {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#lightbox-artist-works {
+    list-style: none;
+    padding: 0;
+}
+
+#lightbox-artist-works li {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-gray-dark);
+}
+
+/* Blog Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.blog-item {
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0px var(--color-red);
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.blog-item-content {
+    padding: 20px;
+}
+
+.blog-item-content h3 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-red);
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.blog-item-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-gray-dark);
+}
+
+.blog-lightbox-content {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#lightbox-blog-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#lightbox-blog-title {
+    font-size: 2.5rem;
+    color: var(--color-red);
+    margin-bottom: 20px;
+}
+
+#lightbox-blog-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* --- Estilos de Página de Contacto --- */
+
+.contact-section .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-section .contact-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-gray-dark);
+}
+
+.contact-section .contact-header p {
+    font-size: 1.2rem;
+    color: var(--color-gray-medium);
+}
+
+.contact-section .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-section .contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-section .contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: 5px;
+}
+
+.contact-section .btn {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.contact-section .btn:hover {
+    background-color: #cc0000;
+}
+
+.contact-section .contact-info h3 {
+    font-size: 1.8rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-info .social-media a {
+    color: var(--color-gray-dark);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.contact-section .contact-info .social-media a:hover {
+    color: var(--color-red);
+}
+
+.contact-section .quote {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-gray-medium);
+}
+
+.contact-section .quote blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* --- Estilos de Página de Inspiración --- */
+
+.inspiration-section {
+    padding: 60px 0;
+}
+
+.inspiration-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.inspiration-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-gray-dark);
+}
+
+.inspiration-header p {
+    font-size: 1.2rem;
+    color: var(--color-gray-medium);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filter-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid var(--color-gray-dark);
+    color: var(--color-gray-dark);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
+}
+
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.inspiration-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inspiration-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0px var(--color-red);
+}
+
+.inspiration-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inspiration-item img {
+    width: 100%;
+    height: auto;
+}
+
+.inspiration-item-info {
+    padding: 20px;
+}
+
+.inspiration-item-info h3 {
+    font-size: 1.8rem;
+    color: var(--color-red);
+    margin-top: 0;
+}
+
+.credits-section {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: var(--color-gray-medium);
+}
+
+.column-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/* --- Estilos de Página de Galería Constructivista --- */
+
+.header.header-gallery {
+    background: none;
+    min-height: auto;
+    padding: 0;
+}
+
+.header.header-gallery::before {
+    display: none;
+}
+
+.gallery-section {
+    background-color: var(--color-gray-light);
+    padding: 4rem 2rem;
+}
+
+.gallery-title-container {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.gallery-title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 4rem;
+    color: var(--color-gray-dark);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.gallery-intro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-gray-dark);
+    max-width: 800px;
+    margin: 10px auto 0;
+}
+
+.constructivist-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-black);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+/* Asignación de áreas en la grilla */
+.constructivist-grid .gallery-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 3; }
+.constructivist-grid .gallery-item:nth-child(2) { grid-column: 3 / 5; grid-row: 1 / 4; }
+.constructivist-grid .gallery-item:nth-child(3) { grid-column: 5 / 7; grid-row: 1 / 3; }
+.constructivist-grid .gallery-item:nth-child(4) { grid-column: 7 / 9; grid-row: 1 / 4; }
+
+.constructivist-grid .gallery-item:nth-child(7) { grid-column: 1 / 4; grid-row: 3 / 6; }
+.constructivist-grid .gallery-item:nth-child(8) { grid-column: 4 / 6; grid-row: 4 / 6; }
+.constructivist-grid .gallery-item:nth-child(9) { grid-column: 6 / 9; grid-row: 4 / 7; }
+
+.constructivist-grid .gallery-item:nth-child(12) { grid-column: 1 / 3; grid-row: 6 / 9; }
+.constructivist-grid .gallery-item:nth-child(13) { grid-column: 3 / 6; grid-row: 6 / 8; }
+.constructivist-grid .gallery-item:nth-child(14) { grid-column: 6 / 8; grid-row: 7 / 9; }
+.constructivist-grid .gallery-item:nth-child(15) { grid-column: 8 / 9; grid-row: 7 / 9; }
+
+
+/* Elementos decorativos */
+.deco-line {
+    background-color: var(--color-red);
+}
+
+.line-1 {
+    grid-column: 1 / 9;
+    grid-row: 2;
+    height: 5px;
+    transform: skewY(-5deg);
+    z-index: 1;
+}
+
+.line-2 {
+    grid-column: 1 / 9;
+    grid-row: 8;
+    height: 8px;
+    background-color: var(--color-white);
+    transform: skewY(3deg);
+    z-index: 1;
+}
+
+.deco-circle {
+    border-radius: 50%;
+}
+
+.circle-1 {
+    grid-column: 8 / 9;
+    grid-row: 3;
+    background-color: var(--color-red);
+    align-self: center;
+    justify-self: center;
+    width: 80px;
+    height: 80px;
+}
+
+.circle-2 {
+    grid-column: 3 / 4;
+    grid-row: 7;
+    border: 5px solid var(--color-red);
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    align-self: end;
+}
+
+.deco-arrow {
+    grid-column: 5 / 6;
+    grid-row: 3 / 5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deco-arrow::before {
+    content: '';
+    width: 10px;
+    height: 100%;
+    background-color: var(--color-white);
+    transform: rotate(35deg);
+}
+
+.deco-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid var(--color-white);
+    transform: rotate(35deg) translate(-15px, -35px);
+}
+
+/* Tooltip para el hover */
+.gallery-tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--color-white);
+    border: 2px solid var(--color-red);
+    padding: 15px;
+    border-radius: 3px;
+    max-width: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    z-index: 1001;
+    pointer-events: none; /* Para que no interfiera con el mouse */
+    transition: opacity 0.2s;
+}
+
+.gallery-tooltip strong {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--color-red);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+/* --- Estilos de Página de Galería Constructivista --- */
+
+.header.header-gallery {
+    background: none;
+    min-height: auto;
+    padding: 0;
+}
+
+.header.header-gallery::before {
+    display: none;
+}
+
+.gallery-section {
+    background-color: #e8e6e6;
+    padding: 4rem 2rem;
+}
+
+.gallery-title-container {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.gallery-title {
+    font-family: 'Russo One', sans-serif;
+    font-size: 4rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.gallery-intro {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    max-width: 800px;
+    margin: 10px auto 0;
+}
+
+.constructivist-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+/* Asignación de áreas en la grilla */
+.constructivist-grid .gallery-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 3; }
+.constructivist-grid .gallery-item:nth-child(2) { grid-column: 3 / 5; grid-row: 1 / 4; }
+.constructivist-grid .gallery-item:nth-child(3) { grid-column: 5 / 7; grid-row: 1 / 3; }
+.constructivist-grid .gallery-item:nth-child(4) { grid-column: 7 / 9; grid-row: 1 / 4; }
+
+.constructivist-grid .gallery-item:nth-child(7) { grid-column: 1 / 4; grid-row: 3 / 6; }
+.constructivist-grid .gallery-item:nth-child(8) { grid-column: 4 / 6; grid-row: 4 / 6; }
+.constructivist-grid .gallery-item:nth-child(9) { grid-column: 6 / 9; grid-row: 4 / 7; }
+
+.constructivist-grid .gallery-item:nth-child(12) { grid-column: 1 / 3; grid-row: 6 / 9; }
+.constructivist-grid .gallery-item:nth-child(13) { grid-column: 3 / 6; grid-row: 6 / 8; }
+.constructivist-grid .gallery-item:nth-child(14) { grid-column: 6 / 8; grid-row: 7 / 9; }
+.constructivist-grid .gallery-item:nth-child(15) { grid-column: 8 / 9; grid-row: 7 / 9; }
+
+
+/* Elementos decorativos */
+.deco-line {
+    background-color: #ff0000;
+}
+
+.line-1 {
+    grid-column: 1 / 9;
+    grid-row: 2;
+    height: 5px;
+    transform: skewY(-5deg);
+    z-index: 1;
+}
+
+.line-2 {
+    grid-column: 1 / 9;
+    grid-row: 8;
+    height: 8px;
+    background-color: #fff;
+    transform: skewY(3deg);
+    z-index: 1;
+}
+
+.deco-circle {
+    border-radius: 50%;
+}
+
+.circle-1 {
+    grid-column: 8 / 9;
+    grid-row: 3;
+    background-color: #ff0000;
+    align-self: center;
+    justify-self: center;
+    width: 80px;
+    height: 80px;
+}
+
+.circle-2 {
+    grid-column: 3 / 4;
+    grid-row: 7;
+    border: 5px solid #ff0000;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    align-self: end;
+}
+
+.deco-arrow {
+    grid-column: 5 / 6;
+    grid-row: 3 / 5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deco-arrow::before {
+    content: '';
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+    transform: rotate(35deg);
+}
+
+.deco-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #fff;
+    transform: rotate(35deg) translate(-15px, -35px);
+}
+
+/* Tooltip para el hover */
+.gallery-tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: 2px solid #ff0000;
+    padding: 15px;
+    border-radius: 3px;
+    max-width: 300px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    z-index: 1001;
+    pointer-events: none; /* Para que no interfiera con el mouse */
+    transition: opacity 0.2s;
+}
+
+.gallery-tooltip strong {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ff0000;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
 
 /* Reseteo básico y fuentes */
 body {
@@ -223,134 +1477,7 @@ h1, h2, h3 {
     /* Estilos de cabecera antiguos eliminados */
 }
 
-/* --- Estilos de Página de Galería --- */
 
-/* Ajuste del header para la página de galería */
-.header-gallery {
-    min-height: auto; /* El header solo contiene la barra de navegación */
-    background: none; /* Quitamos la imagen de fondo principal */
-}
-
-.header-gallery::before {
-    display: none; /* Quitamos el overlay oscuro */
-}
-
-/* Sección de la galería */
-.gallery-section {
-    text-align: center;
-}
-
-.gallery-section h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.gallery-intro {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Cuadrícula de la galería (Masonry) */
-.gallery-grid {
-    column-count: 2;
-    column-gap: 20px;
-}
-
-.gallery-item {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden;
-    background-color: #000;
-}
-
-.gallery-item a {
-    display: block;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block;
-    transition: opacity 0.4s;
-}
-
-.gallery-item .gallery-item-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.4s ease-out;
-}
-
-.gallery-item:hover .gallery-item-info {
-    transform: translateY(0);
-}
-
-.gallery-item:hover img {
-    opacity: 0.4;
-}
-
-.gallery-item-info h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    color: #ff0000;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-}
-
-.gallery-item-info p {
-    font-family: 'Fjalla One', sans-serif;
-    margin: 0;
-    font-size: 1rem;
-}
-
-/* --- Estilos para Lightbox --- */
-.lightbox .lb-caption {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-}
-
-.lightbox .lb-number {
-    font-family: 'Fjalla One', sans-serif;
-}
-
-.lightbox .lb-data .lb-details {
-    text-align: left;
-}
-
-.lightbox .lb-data .lb-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    color: #ff0000;
-    text-transform: uppercase;
-}
-
-.lightboxOverlay {
-    opacity: 0.7 !important; /* Hacemos el fondo más translúcido */
-    background-color: #000;
-}
-
-/* Responsive para la galería (Masonry) */
-@media (min-width: 768px) {
-    .gallery-grid {
-        column-count: 3;
-    }
-}
-
-@media (min-width: 1024px) {
-    .gallery-grid {
-        column-count: 4;
-    }
-}
 
 /* --- Carrusel Simple --- */
 .carousel-container {
@@ -649,12 +1776,12 @@ h1, h2, h3 {
 .contact-section .contact-header h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    color: #333;
+    color: var(--color-gray-dark);
 }
 
 .contact-section .contact-header p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--color-gray-medium);
 }
 
 .contact-section .contact-content {
@@ -687,13 +1814,13 @@ h1, h2, h3 {
 .contact-section .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-gray-medium);
     border-radius: 5px;
 }
 
 .contact-section .btn {
-    background-color: #ff0000;
-    color: #fff;
+    background-color: var(--color-red);
+    color: var(--color-white);
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
@@ -709,7 +1836,7 @@ h1, h2, h3 {
 
 .contact-section .contact-info h3 {
     font-size: 1.8rem;
-    color: #333;
+    color: var(--color-gray-dark);
     margin-bottom: 20px;
 }
 
@@ -720,15 +1847,19 @@ h1, h2, h3 {
 }
 
 .contact-section .contact-info .social-media a {
-    color: #333;
+    color: var(--color-gray-dark);
     font-size: 1.5rem;
     margin-right: 15px;
+}
+
+.contact-section .contact-info .social-media a:hover {
+    color: var(--color-red);
 }
 
 .contact-section .quote {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--color-gray-medium);
 }
 
 .contact-section .quote blockquote {
