@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
+
+/* Reseteo básico y fuentes */
+body {
+    font-family: 'Fjalla One', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Forza la eliminación del scroll horizontal */
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Contenedor principal */
+.header {
+    width: 100%;
+}
+
+.featured-images, .learn-more, .footer {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* --- Cabecera --- */
+.header {
+    background: url('https://via.placeholder.com/1920x600.png?text=Persona+con+megáfono+(B/N)') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    min-height: 50vh; /* Altura mínima para visualización */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* --- Nueva Cabecera --- */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.header-bottom {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex; /* Menú siempre visible */
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 30px; /* Espacio entre elementos del menú */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    color: #ff0000;
+    border-bottom-color: #ff0000;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.portada-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Secciones Principales --- */
+main {
+    /* El padding ahora se gestiona por sección con la clase .container */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-images .container h2, .learn-more .container h2, .artist-section .container h2, .blog-section .container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Carrusel (diseño básico) */
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Permite scroll horizontal */
+    gap: 20px;
+    padding-bottom: 20px; /* Espacio para la barra de scroll */
+}
+
+.carousel img {
+    max-width: 80%;
+    flex-shrink: 0;
+}
+
+/* Sección "Conocé más" */
+.columns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.column {
+    text-align: center;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.column h3 {
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+/* --- Pie de página --- */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff0000;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+/* --- Responsive con Flexbox --- */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .columns-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .column-link {
+        width: 32%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    /* Estilos de cabecera antiguos eliminados */
+}
+
+/* --- Estilos de Página de Galería --- */
+
+/* Ajuste del header para la página de galería */
+.header-gallery {
+    min-height: auto; /* El header solo contiene la barra de navegación */
+    background: none; /* Quitamos la imagen de fondo principal */
+}
+
+.header-gallery::before {
+    display: none; /* Quitamos el overlay oscuro */
+}
+
+/* Sección de la galería */
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.gallery-intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Cuadrícula de la galería (Masonry) */
+.gallery-grid {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.gallery-item a {
+    display: block;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+    transition: opacity 0.4s;
+}
+
+.gallery-item .gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+
+.gallery-item:hover .gallery-item-info {
+    transform: translateY(0);
+}
+
+.gallery-item:hover img {
+    opacity: 0.4;
+}
+
+.gallery-item-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: #ff0000;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.gallery-item-info p {
+    font-family: 'Fjalla One', sans-serif;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* --- Estilos para Lightbox --- */
+.lightbox .lb-caption {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+}
+
+.lightbox .lb-number {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.lightbox .lb-data .lb-details {
+    text-align: left;
+}
+
+.lightbox .lb-data .lb-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #ff0000;
+    text-transform: uppercase;
+}
+
+.lightboxOverlay {
+    opacity: 0.7 !important; /* Hacemos el fondo más translúcido */
+    background-color: #000;
+}
+
+/* Responsive para la galería (Masonry) */
+@media (min-width: 768px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-grid {
+        column-count: 4;
+    }
+}
+
+/* --- Carrusel Simple --- */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.simple-carousel {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    gap: 20px; /* Espacio entre imágenes */
+    padding: 10px 0;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+}
+
+.simple-carousel::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Opera */
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.carousel-btn img {
+    width: 30px; /* Ajusta el tamaño de las flechas */
+    height: auto;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    display: block;
+    height: 250px;
+    width: auto;
+    transition: opacity 0.4s;
+}
+
+.carousel-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+    text-align: center;
+}
+
+.carousel-item:hover .carousel-item-info {
+    transform: translateY(0);
+}
+
+.carousel-item:hover img {
+    opacity: 0.4;
+}
+
+.carousel-item-info h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #ff0000;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Custom Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Artist Section */
+.search-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#artist-search {
+    padding: 10px;
+    width: 50%;
+    max-width: 400px;
+    border: 2px solid #333;
+    font-size: 1rem;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.artist-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.artist-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s;
+}
+
+.artist-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+    text-align: center;
+}
+
+.artist-item:hover .artist-item-info {
+    transform: translateY(0);
+}
+
+.artist-item:hover img {
+    opacity: 0.4;
+}
+
+.artist-item-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #ff0000;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.artist-lightbox-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#lightbox-artist-img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    max-width: 250px;
+    height: auto;
+}
+
+#lightbox-artist-name {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+#lightbox-artist-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#lightbox-artist-works {
+    list-style: none;
+    padding: 0;
+}
+
+#lightbox-artist-works li {
+    margin-bottom: 10px;
+}
+
+/* Blog Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.blog-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.blog-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-item-content {
+    padding: 20px;
+}
+
+.blog-item-content h3 {
+    font-size: 1.8rem;
+    color: #ff0000;
+    margin-top: 0;
+}
+
+.blog-lightbox-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#lightbox-blog-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#lightbox-blog-title {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+#lightbox-blog-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* --- Estilos de Página de Contacto --- */
+
+.contact-section .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-section .contact-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.contact-section .contact-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.contact-section .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-section .contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-section .contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section .btn {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.contact-section .btn:hover {
+    background-color: #cc0000;
+}
+
+.contact-section .contact-info h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-info .social-media a {
+    color: #333;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.contact-section .quote {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.contact-section .quote blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* --- Estilos de Página de Inspiración --- */
+
+.inspiration-section {
+    padding: 60px 0;
+}
+
+.inspiration-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.inspiration-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.inspiration-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filter-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.inspiration-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s;
+}
+
+.inspiration-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.inspiration-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inspiration-item img {
+    width: 100%;
+    height: auto;
+}
+
+.inspiration-item-info {
+    padding: 20px;
+}
+
+.inspiration-item-info h3 {
+    font-size: 1.8rem;
+    color: #ff0000;
+    margin-top: 0;
+}
+
+.credits-section {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.column-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
