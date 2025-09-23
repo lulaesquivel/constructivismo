@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const imgSrc = this.querySelector('img').src;
 
                 artistLightboxName.textContent = name;
-                artistLightboxBio.textContent = bio;
+                artistLightboxBio.innerHTML = bio;
                 artistLightboxImg.src = imgSrc;
                 artistLightboxWorks.innerHTML = '';
                 works.forEach(work => {

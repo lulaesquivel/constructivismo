@@ -124,9 +124,7 @@ h1, h2, h3 {
 }
 
 /* --- Secciones Principales --- */
-main {
-    /* El padding ahora se gestiona por sección con la clase .container */
-}
+/* El padding ahora se gestiona por sección con la clase .container */
 
 .container {
     width: 90%;
@@ -384,7 +382,7 @@ main {
 }
 
 .carousel-btn img {
-    width: 30px; /* Ajusta el tamaño de las flechas */
+    width: 80px; /* Ajusta el tamaño de las flechas */
     height: auto;
 }
 
@@ -433,7 +431,7 @@ main {
 
 .carousel-item-info h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #ff0000;
     margin: 0;
     text-transform: uppercase;
@@ -540,13 +538,21 @@ main {
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.artist-lightbox-image-container {
+    flex: 1;
+}
+
+.artist-lightbox-text-container {
+    flex: 2;
 }
 
 #lightbox-artist-img {
-    float: left;
-    margin-right: 20px;
     margin-bottom: 20px;
-    max-width: 250px;
+    max-width: 100%;
     height: auto;
 }
 
