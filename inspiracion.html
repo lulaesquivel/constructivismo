@@ -36,9 +36,9 @@
 
     <main>
         <section class="inspiration-section">
-            <div class="page-intro-text">
+            <div class="page-intro-text" style="margin: 0 auto 40px auto;">
                 <h2>Legado Visual: Ayer y Hoy</h2>
-                <p>El verdadero impacto de un movimiento artístico se mide por su capacidad de trascender el tiempo. El constructivismo, con su lenguaje audaz y su fe en el diseño como motor de cambio, dejó una huella imborrable. En esta sección exploramos su legado, conectando obras maestras de la vanguardia rusa con ejemplos del diseño, la arquitectura y la moda que nos rodean hoy. Descubre cómo las ideas de hace un siglo siguen construyendo nuestro presente.</p>
+                <p>El verdadero impacto de un movimiento artístico se mide por su capacidad de trascender el tiempo. El constructivismo, con su lenguaje audaz y su fe en el diseño como motor de cambio, dejó una huella imborrable. En esta sección exploramos su legado, conectando obras maestras de la vanguardia rusa con ejemplos del diseño, la arquitectura y la moda que nos rodean hoy. Descubrí cómo las ideas de hace un siglo siguen construyendo nuestro presente.</p>
             </div>
             <div class="container">
                 <!-- Primer Par de Comparación -->
@@ -46,12 +46,12 @@
                     <h3>Diseño Gráfico: De la Propaganda al Rock</h3>
                     <div class="comparison-columns">
                         <div class="comparison-column column-ayer">
-                            <img src="img/lengiz.jpg" alt="Afiche de Lengiz por Rodchenko">
+                            <img src="img/galeria/10.jpeg" alt="Afiche de Lengiz por Rodchenko">
                             <h4>AYER</h4>
                             <p>Alexander Rodchenko, 1924</p>
                         </div>
                         <div class="comparison-column column-hoy">
-                            <img src="img/franz-ferdinand.jpg" alt="Portada de álbum de Franz Ferdinand">
+                            <img src="img/franz-ferdinand.png" alt="Portada de álbum de Franz Ferdinand">
                             <h4>HOY</h4>
                             <p>Franz Ferdinand, 2005</p>
                         </div>
@@ -66,7 +66,7 @@
                     <h3>Diseño Gráfico: La Propaganda como Estilo</h3>
                     <div class="comparison-columns">
                         <div class="comparison-column column-ayer">
-                            <img src="img/strakhov-poster.jpg" alt="Poster de Adolf Strakhov">
+                            <img src="img/strakhov-poster.webp" alt="Poster de Adolf Strakhov">
                             <h4>AYER</h4>
                             <p>Adolf Strakhov, 1926</p>
                         </div>
@@ -106,12 +106,12 @@
                     <h3>Cine y Motion Graphics: El Montaje Dinámico</h3>
                     <div class="comparison-columns">
                         <div class="comparison-column column-ayer">
-                            <img src="img/vertov-camera.jpg" alt="Escena de 'El Hombre de la Cámara' de Dziga Vértov">
+                            <img src="img/vertov-camera.png" alt="Escena de 'El Hombre de la Cámara' de Dziga Vértov">
                             <h4>AYER</h4>
                             <p>Dziga Vértov (Cine-Ojo), 1929</p>
                         </div>
                         <div class="comparison-column column-hoy">
-                            <img src="img/motion-graphics.jpg" alt="Ejemplo de Kinetic Typography">
+                            <img src="img/motion-graphics.webp" alt="Ejemplo de Kinetic Typography">
                             <h4>HOY</h4>
                             <p>Kinetic Typography, Actualidad</p>
                         </div>
@@ -123,12 +123,11 @@
 
                 <!-- Aquí se pueden agregar más pares de comparación en el futuro -->
 
-                <div class="cta-card-with-image">
-                    <div class="cta-text-container">
-                        <h3>La Inspiración está en Todas Partes</h3>
-                        <p>Ahora que has visto algunos ejemplos, ¿dónde más reconoces la huella del constructivismo? El debate y el análisis continúan en nuestro blog.</p>
-                        <a href="blog.html" class="cta-button">Ir al Blog →</a>
-                    </div>
+                <div class="cta-gallery-artistas">
+                    <img src="img/ctablog.png" alt="Icono de Inspiración">
+                    <h3>La Inspiración está en Todas Partes</h3>
+                    <p>Ahora que viste algunos ejemplos, ¿dónde más reconocés la huella del constructivismo? El debate y el análisis continúan en nuestro espacio de reflexión.</p>
+                    <a href="blog.html" class="cta-button-gallery">Ir al Blog →</a>
                 </div>
             </div>
         </section>
@@ -147,27 +146,7 @@
         </div>
     </footer>
 
-    <script>
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const inspirationItems = document.querySelectorAll('.inspiration-item');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const filter = button.dataset.filter;
-
-                inspirationItems.forEach(item => {
-                    if (filter === 'all' || item.dataset.category === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- El script de filtrado no es necesario en este nuevo diseño, se ha eliminado -->
     <script src="js/main.js"></script>
 </body>
 </html>

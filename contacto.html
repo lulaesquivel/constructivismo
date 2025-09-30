@@ -22,7 +22,7 @@
                         <li><a href="galeria.html">Galería</a></li>
                         <li><a href="artistas.html">Artistas</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#">Inspiración</a></li>
+                        <li><a href="inspiracion.html">Inspiración</a></li>
                         <li><a href="contacto.html" class="active">Contacto</a></li>
                     </ul>
                 </nav>
@@ -37,11 +37,13 @@
     <main>
         <section class="contact-section">
             <div class="container">
-                <div class="contact-content">
-                    <div class="contact-form">
+                <div class="contact-container">
+                    <div class="contact-form-column">
+                        <h2>CONTACTO</h2>
+                        <p>¿Tenés una pregunta, una sugerencia o querés compartir tu propio trabajo inspirado en el constructivismo? Este es el espacio para hacerlo. Envianos un mensaje a través del formulario o directamente a nuestro correo electrónico.</p>
                         <form id="contactForm">
                             <div class="form-group">
-                                <label for="name">Nombre</label>
+                                <label for="name">Nombre Completo</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
                             <div class="form-group">
@@ -49,55 +51,16 @@
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Asunto</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label>¿Qué aspecto del constructivismo te interesa más?</label>
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="aspecto-arte" name="aspecto" value="arte">
-                                    <label for="aspecto-arte">Arte y Pintura</label><br>
-                                    <input type="checkbox" id="aspecto-arquitectura" name="aspecto" value="arquitectura">
-                                    <label for="aspecto-arquitectura">Arquitectura</label><br>
-                                    <input type="checkbox" id="aspecto-diseno" name="aspecto" value="diseno">
-                                    <label for="aspecto-diseno">Diseño Gráfico y Tipografía</label><br>
-                                    <input type="checkbox" id="aspecto-historia" name="aspecto" value="historia">
-                                    <label for="aspecto-historia">Historia y Contexto Político</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>¿Cuál es tu artista constructivista preferido?</label>
-                                <select id="artista" name="artista">
-                                    <option value="">Selecciona un artista</option>
-                                    <option value="tatlin">Vladimir Tatlin</option>
-                                    <option value="rodchenko">Alexander Rodchenko</option>
-                                    <option value="lissitzky">El Lissitzky</option>
-                                    <option value="popova">Lyubov Popova</option>
-                                    <option value="stepanova">Varvara Stepanova</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
                                 <label for="message">Mensaje</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn">Enviar mensaje</button>
+                            <button type="submit" class="btn">ENVIAR MENSAJE</button>
                         </form>
                         <div id="form-message" style="display:none; margin-top: 20px;"></div>
                     </div>
-                </div>
-                <div class="contact-info" style="margin-top: 40px; text-align: center;">
-                        <h3>Otras formas de conectar</h3>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:kondizain@gmail.com">kondizain@gmail.com</a>
-                        </p>
-                        <div class="social-media">
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        </div>
+                    <div class="contact-visual-column">
+                        <img src="img/contactohuellas.jpg" alt="Composición visual constructivista">
+                    </div>
                 </div>
             </div>
         </section>
@@ -122,12 +85,11 @@
             const form = event.target;
             const name = form.name.value.trim();
             const email = form.email.value.trim();
-            const subject = form.subject.value.trim();
             const message = form.message.value.trim();
             const formMessage = document.getElementById('form-message');
 
-            if (name === '' || email === '' || subject === '' || message === '') {
-                formMessage.textContent = 'Por favor, completa todos los campos.';
+            if (name === '' || email === '' || message === '') {
+                formMessage.textContent = 'Por favor, completá todos los campos.';
                 formMessage.style.color = 'red';
                 formMessage.style.display = 'block';
                 return;
@@ -135,7 +97,7 @@
 
             // Simulate form submission
             setTimeout(() => {
-                formMessage.textContent = '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.';
+                formMessage.textContent = '¡Gracias por tu mensaje! Nos pondremos en contacto con vos pronto.';
                 formMessage.style.color = 'green';
                 formMessage.style.display = 'block';
                 form.reset();

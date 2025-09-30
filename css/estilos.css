@@ -18,6 +18,11 @@ body {
     overflow-x: hidden; /* Forza la eliminación del scroll horizontal */
 }
 
+main {
+    background-color: var(--color-gray-light);
+    padding: 40px 0;
+}
+
 h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
 }
@@ -63,7 +68,7 @@ p, blockquote {
 }
 
 .logo {
-    max-height: 60px;
+    max-height: 120px;
 }
 
 .logo img {
@@ -181,8 +186,7 @@ p, blockquote {
 .footer {
     background-color: var(--color-gray-dark);
     color: var(--color-white);
-    text-align: center;
-    text-align: justify;
+    text-align: center; /* Centra todo el contenido del footer */
     padding: 40px 5%;
 }
 
@@ -229,39 +233,10 @@ p, blockquote {
 
 /* --- Estilos de Página de Galería (Versión Constructivista Desordenada) --- */
 
-body {
-    background-color: var(--color-gray-light); /* Un gris muy claro como base */
-}
-
 .gallery-section {
     position: relative;
     padding: 4rem 2rem;
     overflow: hidden; /* Para que los elementos de fondo no se salgan */
-}
-
-/* Elementos decorativos de fondo */
-.gallery-section::before {
-    content: '';
-    position: absolute;
-    top: 10%;
-    left: -5%;
-    width: 150px;
-    height: 150px;
-    background-color: var(--color-red);
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.gallery-section::after {
-    content: '';
-    position: absolute;
-    bottom: 5%;
-    right: -10%;
-    width: 40%;
-    height: 10px;
-    background-color: var(--color-black);
-    transform: rotate(-45deg);
-    z-index: 0;
 }
 
 .gallery-section h2 {
@@ -905,8 +880,6 @@ body {
 
 /* --- Sección Introducción --- */
 .intro-constructivismo {
-    background-color: var(--color-gray-dark);
-    color: var(--color-white);
     padding: 4rem 0;
 }
 
@@ -924,10 +897,24 @@ body {
     line-height: 1.7;
 }
 
+.intro-icon {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    height: 120px;
+    width: auto;
+}
+
+.intro-constructivismo h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-red);
+    margin-bottom: 1.5rem;
+}
+
 /* --- Sección Pilares --- */
 .pilares-constructivismo {
     padding: 4rem 0;
-    background-color: var(--color-gray-light);
 }
 
 .pilares-constructivismo h2 {
@@ -974,7 +961,6 @@ body {
 /* --- Sección Explora --- */
 .explora-secciones {
     padding: 4rem 0;
-    background-color: var(--color-white);
 }
 
 .explora-secciones h2 {
@@ -1066,7 +1052,6 @@ body {
 }
 
 .gallery-section {
-    background-color: var(--color-gray-light);
     padding: 4rem 2rem;
 }
 
@@ -1237,7 +1222,6 @@ body {
 /* --- Estilos de Página de Galería Constructivista --- */
 
 .gallery-section {
-    background-color: #e8e6e6;
     padding: 4rem 2rem;
 }
 
@@ -1866,110 +1850,99 @@ body {
 
 /* --- Estilos de Página de Contacto --- */
 
-.contact-section .contact-header {
-    text-align: center;
-    margin-bottom: 40px;
+.contact-section {
+    padding: 4rem 0;
 }
 
-.contact-section .contact-header h1 {
-    font-size: 2.5rem;
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-dark);
+}
+
+.contact-form-column {
+    flex: 1 1 55%; /* Le damos un poco más de espacio al formulario */
+    padding: 2rem 3rem;
+}
+
+.contact-visual-column {
+    flex: 1 1 45%;
+    display: none; /* Oculto en móviles */
+}
+
+.contact-visual-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-form-column h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.8rem;
     text-transform: uppercase;
     color: var(--color-gray-dark);
+    margin-top: 0;
 }
 
-.contact-section .contact-header p {
-    font-size: 1.2rem;
-    text-align: center;
-    color: var(--color-gray-medium);
-}
-
-.contact-section .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.contact-section .contact-form {
-    flex: 2;
-    min-width: 300px;
-}
-
-.contact-section .contact-info {
-    flex: 1;
-    min-width: 300px;
-}
-
-.contact-section .form-group {
+.form-group {
     margin-bottom: 20px;
 }
 
-.contact-section .form-group label {
+.form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-gray-medium);
 }
 
-.contact-section .form-group input,
-.contact-section .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--color-gray-medium);
-    border-radius: 5px;
+    padding: 12px;
+    border: 2px solid var(--color-gray-medium);
+    border-radius: 0; /* Estilo más duro */
+    background-color: var(--color-gray-light);
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
-.contact-section .btn {
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-red);
+}
+
+.contact-form-column .btn {
+    display: inline-block;
     background-color: var(--color-red);
     color: var(--color-white);
-    padding: 12px 20px;
+    padding: 12px 30px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-family: 'Anton', sans-serif;
     text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
-.contact-section .btn:hover {
-    background-color: #cc0000;
-}
-
-.contact-section .contact-info h3 {
-    font-size: 1.8rem;
-    color: var(--color-gray-dark);
-    margin-bottom: 20px;
-}
-
-.contact-section .contact-info p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: center;
-    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
 }
 
-.contact-section .contact-info .social-media a {
-    color: var(--color-gray-dark);
-    font-size: 1.5rem;
-    margin-right: 15px;
+.contact-form-column .btn:hover {
+    background-color: var(--color-black);
 }
 
-.contact-section .contact-info .social-media a:hover {
-    color: var(--color-red);
-}
-
-.contact-section .quote {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--color-gray-medium);
-}
-
-.contact-section .quote blockquote {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 0;
+@media (min-width: 768px) {
+    .contact-visual-column {
+        display: block; /* Mostramos la columna visual en pantallas más grandes */
+    }
 }
 
 /* --- Estilos de Página de Inspiración --- */
 
+/* Estilos de la sección de inspiración movidos y mejorados más abajo */
 .inspiration-section {
     padding: 60px 0;
 }
@@ -2057,6 +2030,7 @@ body {
     color: #666;
 }
 
+
 .column-link {
     text-decoration: none;
     color: inherit;
@@ -2133,7 +2107,6 @@ body {
     padding: 30px;
     background-color: var(--color-gray-light);
     color: var(--color-gray-dark);
-    border-left: 5px solid var(--color-red);
 }
 
 .page-intro-text {
@@ -2146,11 +2119,79 @@ body {
 }
 
 .featured-block.vkhutemas {
-    margin: 0 auto 40px auto;
+    margin: 40px auto;
 }
 
 .featured-block h3 {
     margin-top: 0;
+}
+
+/* --- Estilos Mejorados para la Página de Inspiración --- */
+.comparison-pair {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-dark);
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.comparison-pair > h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.comparison-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.comparison-column {
+    flex: 1;
+    text-align: center;
+}
+
+.comparison-column img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border: 1px solid var(--color-gray-light);
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.comparison-column h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.comparison-column p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.column-ayer h4 {
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
+}
+
+.column-hoy h4 {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.connection-text {
+    border-top: 2px dashed var(--color-gray-medium);
+    padding-top: 20px;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -2160,6 +2201,24 @@ body {
     .comparison-pair:nth-child(even) .comparison-columns {
         flex-direction: row-reverse;
     }
-    .cta-card-with-image { text-align: center; }
-    .cta-text-container { text-align: center; }
+}
+
+/* --- CTA Card con Imagen (Inspiración) --- */
+.cta-card-with-image {
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
+    padding: 40px;
+    text-align: center;
+}
+
+.cta-card-with-image h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.2rem;
+    color: var(--color-red);
+    text-transform: uppercase;
+}
+
+.cta-button {
+    /* Reutiliza estilos de .cta-button-gallery */
+    display: inline-block; background-color: var(--color-red); color: var(--color-white); padding: 12px 30px; text-decoration: none; font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: 1.1rem; transition: transform 0.3s ease;
 }
