@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header header-gallery">
+    <header class="header">
         <div class="header-container">
             <div class="header-top">
                 <div class="logo">
@@ -31,83 +31,104 @@
                 </div>
             </div>
         </div>
+        <img src="img/portadainspiracion.png" alt="Portada Inspiración" class="portada-img">
     </header>
 
     <main>
         <section class="inspiration-section">
+            <div class="page-intro-text">
+                <h2>Legado Visual: Ayer y Hoy</h2>
+                <p>El verdadero impacto de un movimiento artístico se mide por su capacidad de trascender el tiempo. El constructivismo, con su lenguaje audaz y su fe en el diseño como motor de cambio, dejó una huella imborrable. En esta sección exploramos su legado, conectando obras maestras de la vanguardia rusa con ejemplos del diseño, la arquitectura y la moda que nos rodean hoy. Descubre cómo las ideas de hace un siglo siguen construyendo nuestro presente.</p>
+            </div>
             <div class="container">
-                <div class="inspiration-header">
-                    <h1>Inspiración Constructivista</h1>
-                    <p>“El legado del constructivismo vive en cada forma geométrica, cada tipografía audaz y cada composición que desafía lo convencional. Aquí reunimos piezas que nos inspiran y dialogan con este movimiento.”</p>
+                <!-- Primer Par de Comparación -->
+                <div class="comparison-pair">
+                    <h3>Diseño Gráfico: De la Propaganda al Rock</h3>
+                    <div class="comparison-columns">
+                        <div class="comparison-column column-ayer">
+                            <img src="img/lengiz.jpg" alt="Afiche de Lengiz por Rodchenko">
+                            <h4>AYER</h4>
+                            <p>Alexander Rodchenko, 1924</p>
+                        </div>
+                        <div class="comparison-column column-hoy">
+                            <img src="img/franz-ferdinand.jpg" alt="Portada de álbum de Franz Ferdinand">
+                            <h4>HOY</h4>
+                            <p>Franz Ferdinand, 2005</p>
+                        </div>
+                    </div>
+                    <div class="connection-text">
+                        <p>La portada de Franz Ferdinand no solo imita la composición y la tipografía, sino que captura la misma sensación de urgencia y proclama. Es uno de los ejemplos más claros de cómo la estética constructivista se ha integrado en la cultura pop.</p>
+                    </div>
                 </div>
 
-                <div class="filter-container">
-                    <button class="filter-btn active" data-filter="all">Todo</button>
-                    <button class="filter-btn" data-filter="posters">Posters</button>
-                    <button class="filter-btn" data-filter="articles">Artículos</button>
-                    <button class="filter-btn" data-filter="videos">Videos</button>
-                    <button class="filter-btn" data-filter="design">Diseño</button>
-                    <button class="filter-btn" data-filter="reinterpretations">Reinterpretaciones</button>
+                <!-- Segundo Par de Comparación -->
+                <div class="comparison-pair">
+                    <h3>Diseño Gráfico: La Propaganda como Estilo</h3>
+                    <div class="comparison-columns">
+                        <div class="comparison-column column-ayer">
+                            <img src="img/strakhov-poster.jpg" alt="Poster de Adolf Strakhov">
+                            <h4>AYER</h4>
+                            <p>Adolf Strakhov, 1926</p>
+                        </div>
+                        <div class="comparison-column column-hoy">
+                            <img src="img/shepard-fairey.jpg" alt="Obra de Shepard Fairey (Obey)">
+                            <h4>HOY</h4>
+                            <p>Shepard Fairey (Obey), 2008</p>
+                        </div>
+                    </div>
+                    <div class="connection-text">
+                        <p>Shepard Fairey ha citado directamente al constructivismo como una de sus mayores influencias. Su obra adopta la misma economía de medios y el impacto visual de la propaganda soviética para transmitir sus propios mensajes sociales en el contexto urbano actual.</p>
+                    </div>
                 </div>
 
-                <div class="inspiration-grid">
-                    <div class="inspiration-item" data-category="posters">
-                        <a href="#" target="_blank">
-                            <img src="https://via.placeholder.com/400x300.png?text=Poster+Contemporáneo" alt="Poster Contemporáneo">
-                            <div class="inspiration-item-info">
-                                <h3>Poster Fest 2024</h3>
-                                <p>Un poster que evoca la estética constructivista para un festival de diseño.</p>
-                            </div>
-                        </a>
+                <!-- Tercer Par de Comparación -->
+                <div class="comparison-pair">
+                    <h3>Diseño Web: La Grilla Rota</h3>
+                    <div class="comparison-columns">
+                        <div class="comparison-column column-ayer">
+                            <img src="img/lissitzky-proun.jpg" alt="Proun de El Lissitzky">
+                            <h4>AYER</h4>
+                            <p>El Lissitzky (Proun), ~1923</p>
+                        </div>
+                        <div class="comparison-column column-hoy">
+                            <img src="img/broken-grid-web.jpg" alt="Ejemplo de diseño web con grilla rota">
+                            <h4>HOY</h4>
+                            <p>Diseño Web Asimétrico, 2020s</p>
+                        </div>
                     </div>
-                    <div class="inspiration-item" data-category="articles">
-                        <a href="#" target="_blank">
-                            <img src="https://via.placeholder.com/400x300.png?text=Artículo+Externo" alt="Artículo Externo">
-                            <div class="inspiration-item-info">
-                                <h3>El Constructivismo en la Web</h3>
-                                <p>Análisis de cómo los principios constructivistas se aplican en el diseño web moderno.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="inspiration-item" data-category="videos">
-                        <a href="#" target="_blank">
-                            <img src="https://via.placeholder.com/400x300.png?text=Video+Documental" alt="Video Documental">
-                            <div class="inspiration-item-info">
-                                <h3>Constructivismo: La Revolución del Arte</h3>
-                                <p>Un documental que explora los orígenes y el impacto del movimiento.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="inspiration-item" data-category="design">
-                        <a href="#" target="_blank">
-                            <img src="https://via.placeholder.com/400x300.png?text=Diseño+Gráfico" alt="Diseño Gráfico">
-                            <div class="inspiration-item-info">
-                                <h3>Tipografía Audaz</h3>
-                                <p>Ejemplos de fuentes y composiciones tipográficas inspiradas en el constructivismo.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="inspiration-item" data-category="reinterpretations">
-                        <a href="#" target="_blank">
-                            <img src="https://via.placeholder.com/400x300.png?text=Obra+Reinterpretada" alt="Obra Reinterpretada">
-                            <div class="inspiration-item-info">
-                                <h3>Homenaje a Rodchenko</h3>
-                                <p>Artistas contemporáneos reinterpretan las obras del icónico fotógrafo.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="inspiration-item" data-category="posters">
-                        <a href="#" target="_blank">
-                            <img src="https://via.placeholder.com/400x300.png?text=Poster+Minimalista" alt="Poster Minimalista">
-                            <div class="inspiration-item-info">
-                                <h3>Geometría Pura</h3>
-                                <p>Un poster minimalista que juega con las formas geométricas y el espacio negativo.</p>
-                            </div>
-                        </a>
+                    <div class="connection-text">
+                        <p>La libertad compositiva que El Lissitzky exploró en sus 'Proun' es la base de muchas tendencias del diseño web contemporáneo. La idea de romper la rigidez de la grilla para crear tensión y dinamismo visual es un principio puramente constructivista.</p>
                     </div>
                 </div>
-                <div class="credits-section">
-                    <p>Créditos: Las imágenes y videos son propiedad de sus respectivos autores. Los enlaces externos se proporcionan únicamente con fines informativos.</p>
+
+                <!-- Cuarto Par de Comparación -->
+                <div class="comparison-pair">
+                    <h3>Cine y Motion Graphics: El Montaje Dinámico</h3>
+                    <div class="comparison-columns">
+                        <div class="comparison-column column-ayer">
+                            <img src="img/vertov-camera.jpg" alt="Escena de 'El Hombre de la Cámara' de Dziga Vértov">
+                            <h4>AYER</h4>
+                            <p>Dziga Vértov (Cine-Ojo), 1929</p>
+                        </div>
+                        <div class="comparison-column column-hoy">
+                            <img src="img/motion-graphics.jpg" alt="Ejemplo de Kinetic Typography">
+                            <h4>HOY</h4>
+                            <p>Kinetic Typography, Actualidad</p>
+                        </div>
+                    </div>
+                    <div class="connection-text">
+                        <p>Vértov usaba el montaje para construir una nueva realidad visual. Esa misma energía y la idea de que la edición es una forma de construcción rítmica son fundamentales en el lenguaje de los motion graphics y el videoclip actual.</p>
+                    </div>
+                </div>
+
+                <!-- Aquí se pueden agregar más pares de comparación en el futuro -->
+
+                <div class="cta-card-with-image">
+                    <div class="cta-text-container">
+                        <h3>La Inspiración está en Todas Partes</h3>
+                        <p>Ahora que has visto algunos ejemplos, ¿dónde más reconoces la huella del constructivismo? El debate y el análisis continúan en nuestro blog.</p>
+                        <a href="blog.html" class="cta-button">Ir al Blog →</a>
+                    </div>
                 </div>
             </div>
         </section>

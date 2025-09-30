@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Russo+One&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Fjalla+One&family=Russo+One&family=Roboto:wght@400;700&display=swap');
 
 /* Reseteo básico y fuentes */
 :root {
@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     margin: 0;
     background-color: var(--color-gray-light);
     color: var(--color-gray-dark);
@@ -19,7 +19,11 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p, blockquote {
+    text-align: justify;
 }
 
 /* Contenedor principal */
@@ -34,25 +38,11 @@ h1, h2, h3 {
 
 /* --- Cabecera --- */
 .header {
-    background: url('https://via.placeholder.com/1920x600.png?text=Persona+con+megáfono+(B/N)') no-repeat center center;
-    background-size: cover;
-    color: white;
-    position: relative;
-    min-height: 50vh; /* Altura mínima para visualización */
+    background-color: var(--color-black);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-}
 
 /* --- Nueva Cabecera --- */
 .header-container {
@@ -130,6 +120,8 @@ h1, h2, h3 {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    max-height: 50vh;
 }
 
 /* --- Secciones Principales --- */
@@ -169,6 +161,7 @@ h1, h2, h3 {
 
 .column {
     text-align: center;
+    text-align: left;
 }
 
 .column img {
@@ -180,6 +173,7 @@ h1, h2, h3 {
 .column h3 {
     font-size: 1.5rem;
     color: var(--color-red);
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -188,6 +182,7 @@ h1, h2, h3 {
     background-color: var(--color-gray-dark);
     color: var(--color-white);
     text-align: center;
+    text-align: justify;
     padding: 40px 5%;
 }
 
@@ -204,6 +199,7 @@ h1, h2, h3 {
 
 .contact-info {
     margin-top: 20px;
+    text-align: center;
 }
 
 .contact-info a {
@@ -279,100 +275,20 @@ body {
     z-index: 2;
 }
 
+.gallery-intro-text {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    font-size: 1.2rem;
+}
+
 .gallery-intro {
     max-width: 800px;
     margin: 0 auto 40px auto;
     font-size: 1.2rem;
     line-height: 1.6;
     color: var(--color-gray-dark);
-    text-align: center;
     position: relative;
     z-index: 2;
-}
-
-.gallery-grid {
-    column-count: 2;
-    column-gap: 25px;
-    position: relative;
-    z-index: 1;
-}
-
-.gallery-item {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 25px;
-    overflow: hidden;
-    background-color: var(--color-black);
-    border: 5px solid var(--color-black);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: rotate(2deg) scale(1.02); /* Efecto "desordenado" al pasar el mouse */
-    box-shadow: 10px 10px 0px var(--color-red);
-    z-index: 10;
-}
-
-.gallery-item a {
-    display: block;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.4s;
-}
-
-.gallery-item .gallery-item-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    color: var(--color-white);
-    padding: 25px; /* Aumentado el padding */
-    transform: translateY(100%);
-    transition: transform 0.4s ease-out;
-    max-height: 80%; /* Limita la altura máxima */
-    overflow-y: auto; /* Añade scroll si el contenido es muy largo */
-}
-
-.gallery-item:hover .gallery-item-info {
-    transform: translateY(0);
-}
-
-.gallery-item:hover img {
-    opacity: 0.6;
-}
-
-.gallery-item-info h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem; /* Reducido */
-    color: var(--color-red);
-    margin: 0 0 8px 0;
-    text-transform: uppercase;
-}
-
-.gallery-item-info p {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    font-size: 0.9rem; /* Reducido */
-    line-height: 1.4;
-}
-
-/* Responsive para la galería */
-@media (min-width: 768px) {
-    .gallery-grid {
-        column-count: 3;
-    }
-}
-
-@media (min-width: 1024px) {
-    .gallery-grid {
-        column-count: 4;
-    }
 }
 
 /* --- Carrusel Simple --- */
@@ -458,25 +374,6 @@ body {
     color: var(--color-red);
     margin: 0;
     text-transform: uppercase;
-}
-
-/* Custom Lightbox */
-.lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
 }
 
 .close-btn {
@@ -593,9 +490,10 @@ body {
 }
 
 #lightbox-artist-bio {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: justify;
     margin-bottom: 20px;
 }
 
@@ -606,7 +504,7 @@ body {
 
 #lightbox-artist-works li {
     margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     color: var(--color-gray-dark);
 }
 
@@ -621,12 +519,17 @@ body {
     background: var(--color-white);
     border: 2px solid var(--color-black);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
     position: relative;
     overflow: hidden;
 }
 
 .blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0px var(--color-red);
+}
+
+.blog-item.active {
     transform: translateY(-5px);
     box-shadow: 5px 5px 0px var(--color-red);
 }
@@ -643,7 +546,7 @@ body {
 }
 
 .blog-item-content h3 {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
     color: var(--color-red);
     margin-top: 0;
@@ -651,9 +554,10 @@ body {
 }
 
 .blog-item-content p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
+    text-align: justify;
     color: var(--color-gray-dark);
 }
 
@@ -681,8 +585,9 @@ body {
 }
 
 #lightbox-blog-text {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1.1rem;
+    text-align: justify;
     line-height: 1.6;
 }
 
@@ -702,6 +607,7 @@ body {
 
 .contact-section .contact-header p {
     font-size: 1.2rem;
+    text-align: center;
     color: var(--color-gray-medium);
 }
 
@@ -764,6 +670,7 @@ body {
 .contact-section .contact-info p {
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -809,6 +716,7 @@ body {
 .inspiration-header p {
     font-size: 1.2rem;
     color: var(--color-gray-medium);
+    text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -873,21 +781,278 @@ body {
 .credits-section {
     text-align: center;
     margin-top: 60px;
+    text-align: justify;
     font-size: 0.9rem;
     color: var(--color-gray-medium);
 }
 
-.column-link {
-    text-decoration: none;
-    color: inherit;
+/* --- Nueva Galería --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--color-black);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.overlay-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    padding: 10px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .overlay-title {
+    transform: scale(1);
+}
+
+.overlay-description {
+    display: none; /* Oculto, solo para JS */
+}
+
+/* --- Nuevo Lightbox --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none; /* Se activa con JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.lightbox-container {
+    position: relative;
+    background: var(--color-white);
+    color: var(--color-gray-dark);
+    padding: 25px;
+    border: 2px solid var(--color-red);
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.lightbox-content {
+    max-width: 100%;
+    max-height: 55vh;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#lightbox-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.2rem;
+    color: var(--color-red);
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+#lightbox-description {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Sección Introducción --- */
+.intro-constructivismo {
+    background-color: var(--color-gray-dark);
+    color: var(--color-white);
+    padding: 4rem 0;
+}
+
+.intro-constructivismo h2 {
+    font-size: 2.5rem;
+    color: var(--color-red);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.intro-constructivismo p {
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* --- Sección Pilares --- */
+.pilares-constructivismo {
+    padding: 4rem 0;
+    background-color: var(--color-gray-light);
+}
+
+.pilares-constructivismo h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.pilar {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border: 2px solid var(--color-gray-dark);
+    text-align: center;
+}
+
+.pilar img {
+    height: 180px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pilar h3 {
+    font-size: 1.8rem;
+    color: var(--color-red);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.pilar p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Sección Explora --- */
+.explora-secciones {
+    padding: 4rem 0;
+    background-color: var(--color-white);
+}
+
+.explora-secciones h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.explora-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.seccion-link {
+    border: 2px solid var(--color-gray-dark);
+    padding: 2.5rem;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.column-link:hover {
+.seccion-link:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 7px 7px 0px var(--color-red);
 }
+
+.seccion-link img {
+    height: 180px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion-link h3 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.seccion-link p {
+    margin-bottom: 2rem;
+}
+
+.seccion-link .btn {
+    display: inline-block;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.seccion-link .btn:hover {
+    background-color: var(--color-black);
+}
+
+/* --- Responsive para nuevas secciones --- */
+@media (min-width: 768px) {
+    .pilares-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .explora-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .pilares-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 /* --- Estilos de Página de Galería Constructivista --- */
 
 .header.header-gallery {
@@ -919,10 +1084,9 @@ body {
 }
 
 .gallery-intro {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1.5rem;
     color: var(--color-gray-dark);
-    max-width: 800px;
     margin: 10px auto 0;
 }
 
@@ -1054,10 +1218,10 @@ body {
     border: 2px solid var(--color-red);
     padding: 15px;
     border-radius: 3px;
-    max-width: 300px;
-    font-family: 'Roboto', sans-serif;
+    max-width: 300px;    
     font-size: 0.9rem;
     line-height: 1.5;
+    text-align: justify;
     z-index: 1001;
     pointer-events: none; /* Para que no interfiera con el mouse */
     transition: opacity 0.2s;
@@ -1071,16 +1235,6 @@ body {
     margin-bottom: 5px;
 }
 /* --- Estilos de Página de Galería Constructivista --- */
-
-.header.header-gallery {
-    background: none;
-    min-height: auto;
-    padding: 0;
-}
-
-.header.header-gallery::before {
-    display: none;
-}
 
 .gallery-section {
     background-color: #e8e6e6;
@@ -1101,10 +1255,9 @@ body {
 }
 
 .gallery-intro {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1.5rem;
-    color: #333;
-    max-width: 800px;
+    color: #333;    
     margin: 10px auto 0;
 }
 
@@ -1236,10 +1389,10 @@ body {
     border: 2px solid #ff0000;
     padding: 15px;
     border-radius: 3px;
-    max-width: 300px;
-    font-family: 'Fjalla One', sans-serif;
+    max-width: 300px;    
     font-size: 0.9rem;
     line-height: 1.5;
+    text-align: justify;
     z-index: 1001;
     pointer-events: none; /* Para que no interfiera con el mouse */
     transition: opacity 0.2s;
@@ -1251,130 +1404,6 @@ body {
     font-size: 1.2rem;
     display: block;
     margin-bottom: 5px;
-}
-
-
-/* Reseteo básico y fuentes */
-body {
-    font-family: 'Fjalla One', sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    overflow-x: hidden; /* Forza la eliminación del scroll horizontal */
-}
-
-h1, h2, h3 {
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-/* Contenedor principal */
-.header {
-    width: 100%;
-}
-
-.featured-images, .learn-more, .footer {
-    width: 100%;
-    padding: 20px 0;
-}
-
-/* --- Cabecera --- */
-.header {
-    background: url('https://via.placeholder.com/1920x600.png?text=Persona+con+megáfono+(B/N)') no-repeat center center;
-    background-size: cover;
-    color: white;
-    position: relative;
-    min-height: 50vh; /* Altura mínima para visualización */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-/* --- Nueva Cabecera --- */
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: #000;
-    position: relative;
-    z-index: 2;
-}
-
-.header-top {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.logo {
-    max-height: 60px;
-}
-
-.logo img {
-    height: 100%;
-    width: auto;
-}
-
-.header-bottom {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-menu {
-    display: flex; /* Menú siempre visible */
-}
-
-.nav-menu ul {
-    display: flex;
-    gap: 30px; /* Espacio entre elementos del menú */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-    padding: 5px 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s;
-}
-
-.nav-menu ul li a:hover,
-.nav-menu ul li a.active {
-    color: #ff0000;
-    border-bottom-color: #ff0000;
-}
-
-.search-icon {
-    position: absolute;
-    right: 0;
-    font-size: 1.2rem;
-    color: white;
-    cursor: pointer;
-}
-
-.portada-img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* --- Secciones Principales --- */
@@ -1415,6 +1444,7 @@ h1, h2, h3 {
 
 .column {
     text-align: center;
+    text-align: left;
 }
 
 .column img {
@@ -1426,6 +1456,7 @@ h1, h2, h3 {
 .column h3 {
     font-size: 1.5rem;
     color: #ff0000;
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -1434,6 +1465,7 @@ h1, h2, h3 {
     background-color: #333;
     color: white;
     text-align: center;
+    text-align: justify;
     padding: 40px 5%;
 }
 
@@ -1450,6 +1482,7 @@ h1, h2, h3 {
 
 .contact-info {
     margin-top: 20px;
+    text-align: center;
 }
 
 .contact-info a {
@@ -1592,6 +1625,69 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
 }
+.lightbox-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.blog-lightbox-content {
+    position: relative;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 800px;
+    max-height: 90vh; /* Ocupa máximo el 90% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+.lightbox-scroll-container {
+   overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+   padding: 40px;
+}
+
+.blog-lightbox-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#lightbox-blog-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#lightbox-blog-title {
+   font-family: 'Anton', sans-serif;
+   font-size: 2.5rem;
+   margin-bottom: 15px;
+}
+
+#lightbox-blog-text {
+   line-height: 1.7;
+}
+
+#lightbox-blog-text blockquote {
+   border-left: 3px solid #ccc;
+   padding-left: 20px;
+   margin-left: 0;
+   font-style: italic;
+   color: #666;
+}
 
 /* Artist Section */
 .search-container {
@@ -1691,6 +1787,7 @@ h1, h2, h3 {
 
 #lightbox-artist-bio {
     font-size: 1.1rem;
+    text-align: justify;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -1762,6 +1859,7 @@ h1, h2, h3 {
 
 #lightbox-blog-text {
     font-size: 1.1rem;
+    text-align: justify;
     line-height: 1.6;
 }
 
@@ -1781,6 +1879,7 @@ h1, h2, h3 {
 
 .contact-section .contact-header p {
     font-size: 1.2rem;
+    text-align: center;
     color: var(--color-gray-medium);
 }
 
@@ -1843,6 +1942,7 @@ h1, h2, h3 {
 .contact-section .contact-info p {
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -1888,6 +1988,7 @@ h1, h2, h3 {
 .inspiration-header p {
     font-size: 1.2rem;
     color: #666;
+    text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -1951,6 +2052,7 @@ h1, h2, h3 {
 .credits-section {
     text-align: center;
     margin-top: 60px;
+    text-align: justify;
     font-size: 0.9rem;
     color: #666;
 }
@@ -1965,4 +2067,99 @@ h1, h2, h3 {
 .column-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- CTA en Galería --- */
+.cta-gallery-artistas {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-dark);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 4rem auto 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-gallery-artistas:hover {
+    transform: translateY(-5px);
+    box-shadow: 7px 7px 0px var(--color-red);
+}
+
+.cta-gallery-artistas img {
+    height: 120px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-gallery-artistas h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.2rem;
+    color: var(--color-gray-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.cta-gallery-artistas p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cta-button-gallery {
+    display: inline-block;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button-gallery:hover {
+    transform: scale(1.05);
+}
+
+/* --- Estilos Unificados para Introducción en Página de Artistas --- */
+.page-intro-text,
+.featured-block.vkhutemas {
+    max-width: 1100px;
+    padding: 30px;
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    border-left: 5px solid var(--color-red);
+}
+
+.page-intro-text {
+    margin: 40px auto 0 auto;
+}
+
+.page-intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.featured-block.vkhutemas {
+    margin: 0 auto 40px auto;
+}
+
+.featured-block h3 {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .comparison-columns {
+        flex-direction: row;
+    }
+    .comparison-pair:nth-child(even) .comparison-columns {
+        flex-direction: row-reverse;
+    }
+    .cta-card-with-image { text-align: center; }
+    .cta-text-container { text-align: center; }
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header header-gallery">
+    <header class="header">
         <div class="header-container">
             <div class="header-top">
                 <div class="logo">
@@ -31,58 +31,69 @@
                 </div>
             </div>
         </div>
+        <img src="img/portadaartistas.png" alt="Portada Artistas" class="portada-img">
     </header>
 
     <main>
+        <div class="page-intro-text">
+            <p>En el corazón del constructivismo late una idea radical: el artista no es un genio aislado, sino un <strong>ingeniero social</strong>. Las figuras que aquí presentamos no buscaban la belleza en un lienzo, sino la funcionalidad en la vida cotidiana. Fueron diseñadores, arquitectos, fotógrafos y teóricos que utilizaron su creatividad como una herramienta para construir un mundo nuevo y una sociedad más justa. Conoce a los hombres y mujeres que cambiaron el arte para siempre, armados con compases, cámaras y una fe inquebrantable en el futuro.</p>
+        </div>
+
         <section class="artist-section">
             <div class="container">
-                <h2>Artistas Destacados</h2>
-                <div class="search-container">
-                    <input type="text" id="artist-search" placeholder="Buscar artistas...">
+                <div class="featured-block vkhutemas">
+                    <h3>VKHUTEMAS: El Corazón del Movimiento</h3>
+                    <p>Los Talleres Superiores de Arte y Técnica del Estado (VKhUTEMAS), fundados en Moscú en 1920, fueron el crisol de la vanguardia rusa. Considerada la "Bauhaus soviética", esta revolucionaria escuela unió arte y producción industrial, enseñando a los estudiantes a diseñar todo, desde sillas y tejidos hasta edificios. Artistas como Rodchenko, Lissitzky y Popova impartieron clases aquí, formando a una nueva generación de creadores que veían el diseño como una fuerza para el cambio social.</p>
                 </div>
                 <div class="artist-grid">
-                    <div class="artist-item" data-bio="Artista ruso nacido en Moscú en 1885, considerado el iniciador del constructivismo. Defendía que el arte debía integrarse en la vida cotidiana y en la producción industrial. Influenciado por el cubismo y el futurismo, buscó fusionar arte y tecnología como agentes del cambio social.<br><br><strong>Dato curioso:</strong> Su famosa torre para la Tercera Internacional nunca fue construida, pero se convirtió en un ícono del arte utópico soviético, con una estructura helicoidal que simbolizaba el dinamismo revolucionario." data-works="Monumento a la Tercera Internacional (1920),Contrarrelieves y Relieves de esquina">
+                    <div class="artist-item" data-bio="Figura fundacional y visionaria del constructivismo. Tatlin creía que el arte debía abandonar los museos e integrarse en la producción y la vida. Su Monumento a la Tercera Internacional, aunque nunca se construyó, es el símbolo más potente de la utopía constructivista: una fusión de arquitectura, escultura y propaganda. Su lema era 'ni hacia lo nuevo, ni hacia lo viejo, sino hacia lo necesario'." data-works="Monumento a la Tercera Internacional,Contrarrelieves,Letatlin (máquina voladora)">
                         <img src="img/Vladimir-Tatlin-1.jpg" alt="Vladimir Tatlin">
                         <div class="artist-item-info">
                             <h3>Vladimir Tatlin</h3>
                         </div>
                     </div>
-                    <div class="artist-item" data-bio="Nacido en San Petersburgo en 1891, fue pintor, diseñador gráfico y fotógrafo. Revolucionó la fotografía con ángulos inusuales y perspectivas modernas. Fue pionero del fotoconstructivismo y trabajó en diseño gráfico, publicidad y cine.<br><br><strong>Dato curioso:</strong> Rodchenko abandonó la pintura tradicional para dedicarse al diseño gráfico y la fotografía, convencido de que el arte debía servir a la revolución y ser accesible para todos." data-works="Fotomontajes urbanos,Diseños de carteles y portadas de libros,Serie ‘El circo’">
+                    <div class="artist-item" data-bio="Considerado uno de los padres del diseño gráfico y la fotografía moderna. Rodchenko proclamó la 'muerte de la pintura' para dedicarse a las artes aplicadas. Sus fotomontajes para la revista LEF y sus ángulos de cámara extremos (contrapicados y cenitales) buscaban romper con la perspectiva tradicional y mostrar al 'hombre nuevo' soviético desde un punto de vista dinámico y revolucionario." data-works="Afiche '¡Libros!' (Lengiz),Portadas de la revista LEF,Club Obrero">
                         <img src="img/1935-alexander_rodschenko.jpg" alt="Alexander Rodchenko">
                         <div class="artist-item-info">
                             <h3>Alexander Rodchenko</h3>
                         </div>
                     </div>
-                    <div class="artist-item" data-bio="Lazar Lisitski, nacido en 1890, fue arquitecto, diseñador y artista gráfico. Creó los Proun (Proyectos de afirmación de lo nuevo), que combinaban pintura, arquitectura y diseño. Fue puente entre el suprematismo y el constructivismo.<br><br><strong>Dato curioso:</strong> Su obra Golpea a los blancos con la cuña roja se convirtió en uno de los carteles más emblemáticos de la propaganda soviética, combinando geometría abstracta con mensaje político." data-works="Proun Room (1923),Carteles de propaganda soviética,Diseño del libro ‘Para la voz’ de Mayakovsky">
+                    <div class="artist-item" data-bio="Actuó como un embajador cultural, conectando la vanguardia rusa con movimientos europeos como De Stijl y la Bauhaus. Su concepto de 'Proun' (Proyecto para la Afirmación de lo Nuevo) era un estado intermedio entre la pintura y la arquitectura, explorando el espacio y la forma. Fue un innovador radical en el diseño de exposiciones y la tipografía, tratándola como un material de construcción más." data-works="Proun Room,Golpea a los blancos con la cuña roja,Diseño del libro 'Para la voz'">
                         <img src="img/El_lissitzky_self_portrait_1924.jpg" alt="El Lissitzky">
                         <div class="artist-item-info">
                             <h3>El Lissitzky</h3>
                         </div>
                     </div>
-                    <div class="artist-item" data-bio="Escultor ruso nacido en 1890, fundador del constructivismo junto a su hermano Antoine Pevsner. Introdujo el movimiento y la transparencia en la escultura, usando materiales industriales como plexiglás y acero.<br><br><strong>Dato curioso:</strong> Gabo desarrolló el concepto de “escultura cinética”, incorporando el tiempo y el movimiento como elementos esenciales del arte moderno." data-works="Construcción cinética (1920),Construcción en el espacio equilibrada entre dos puntos (1925),Cabeza Nº 2 (1916)">
+                    <div class="artist-item" data-bio="Junto a su hermano Antoine Pevsner, fue autor del 'Manifiesto Realista', un texto clave del movimiento. Gabo fue pionero en la escultura cinética y en el uso de materiales modernos como el plástico transparente (plexiglás) y el metal. Su obra se centra en el espacio y el tiempo, rechazando la masa sólida tradicional de la escultura para crear estructuras diáfanas y dinámicas." data-works="Construcción cinética (Onda en pie),Cabeza Construida Nº 2,Columna Transparente">
                         <img src="img/NaumGabo1957.jpg" alt="Naum Gabo">
                         <div class="artist-item-info">
                             <h3>Naum Gabo</h3>
                         </div>
                     </div>
-                    <div class="artist-item" data-bio="Escultor ruso-francés nacido en 1886. Coautor del Manifiesto Realista junto a Gabo. Defendía un constructivismo formalista, centrado en la belleza de los materiales y las formas geométricas.<br><br><strong>Dato curioso:</strong> Aunque compartía ideales con Gabo, Pevsner se inclinó más hacia la expresión artística que hacia la funcionalidad, lo que lo distanció del constructivismo más utilitario." data-works="Superficie desenrollable (1936),Proyección dinámica al grado 30 (1951)">
+                    <div class="artist-item" data-bio="Aunque firmó el 'Manifiesto Realista' con su hermano, el enfoque de Pevsner fue más estético que utilitario. Se especializó en crear complejas formas abstractas a partir de varillas de metal (bronce y cobre) soldadas entre sí, explorando conceptos de ritmo, espacio y superficies dinámicas. Su obra representa una vertiente más lírica y menos politizada del constructivismo." data-works="Superficie desenrollable,Proyección dinámica al grado 30,Columna de la Paz">
                         <img src="img/Pevsner_photo.jpg" alt="Antoine Pevsner">
                         <div class="artist-item-info">
                             <h3>Antoine Pevsner</h3>
                         </div>
                     </div>
-                    <div class="artist-item" data-bio="Pintora rusa nacida en 1889. Combinó cubismo y futurismo en sus obras abstractas. Participó activamente en la Revolución Rusa y diseñó escenografías, textiles y vestuarios.<br><br><strong>Dato curioso:</strong> Popova fue una de las primeras artistas en aplicar los principios del constructivismo al diseño textil, creando patrones para la industria soviética." data-works="Arquitectura pictórica,Construcción de la Fuerza Espacial,Naturaleza muerta con guitarra">
+                    <div class="artist-item" data-bio="Fue una de las artistas más versátiles de la vanguardia rusa, apodada la 'artista-constructora'. Tras una exitosa carrera como pintora cubofuturista, abandonó el arte de caballete por considerarlo burgués y se volcó al diseño de producción. Creó innovadores diseños textiles para la industria, escenografías teatrales biomecánicas para Meyerhold y carteles de propaganda, aplicando sus teorías de la 'arquitectura pictórica' a objetos útiles." data-works="Escenografía para 'El magnífico cornudo',Diseños textiles para la FST,Construcción de la Fuerza Espacial">
                         <img src="img/Lyubov_Popova.jpg" alt="Lyubov Popova">
                         <div class="artist-item-info">
                             <h3>Lyubov Popova</h3>
                         </div>
                     </div>
-                    <div class="artist-item" data-bio="Artista multifacética nacida en 1894. Fue diseñadora gráfica, textil y escenógrafa. Colaboró con Rodchenko y Popova en el desarrollo del constructivismo. Diseñó ropa funcional para el nuevo orden soviético.<br><br><strong>Dato curioso:</strong> Stepanova creía que la moda debía ser práctica y reflejar los valores de la nueva sociedad, por eso sus diseños eran pensados para trabajadores y deportistas." data-works="Diseños textiles constructivistas,Escenografía para ‘La muerte de Tarelkin’,Libros de poesía visual: Zigra Ar y Gaust Chaba">
+                    <div class="artist-item" data-bio="Artista multidisciplinar y compañera inseparable de Rodchenko, con quien colaboró en innumerables proyectos. Stepanova fue una figura central en el diseño textil, desarrollando el concepto de 'prodezodezhda' (ropa de producción): prendas funcionales, geométricas y unisex para el nuevo ciudadano soviético. Su trabajo en diseño gráfico y poesía visual también fue fundamental para la estética de revistas como LEF." data-works="Diseños de ropa deportiva y de trabajo,Libros de poesía visual (Zigra Ar),Fotomontajes y collages">
                         <img src="img/varvara.jpeg" alt="Varvara Stepanova">
                         <div class="artist-item-info">
                             <h3>Varvara Stepanova</h3>
                         </div>
                     </div>
+                </div>
+                <div class="cta-gallery-artistas">
+                    <img src="img/ctaartistas.png" alt="Icono de Galería">
+                    <h3>De los Creadores a las Creaciones</h3>
+                    <p>Has conocido a los visionarios. Ahora, sumérgete en el resultado de sus ideas y explora sus obras más emblemáticas en nuestra galería interactiva.</p>
+                    <a href="galeria.html" class="cta-button-gallery">Explorar la Galería →</a>
                 </div>
             </div>
         </section>

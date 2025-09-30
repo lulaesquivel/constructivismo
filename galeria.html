@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
-    <header class="header header-gallery">
+    <header class="header">
         <div class="header-container">
             <div class="header-top">
                 <div class="logo">
@@ -31,142 +31,157 @@
                 </div>
             </div>
         </div>
+        <img src="img/portadagaleria.png" alt="Portada Galería" class="portada-img">
     </header>
 
     <main>
         <section class="gallery-section">
-            <h2>Galería</h2>
-            <p class="gallery-intro">Explora una colección de obras inspiradas en la audacia y la geometría del constructivismo. Haz clic en cualquier imagen para verla en detalle.</p>
+            <div class="gallery-intro-text">
+                <p>El constructivismo fue la respuesta artística a una revolución. Nacido en una Rusia que buscaba reinventarse, el movimiento abandonó el lienzo para construir una nueva realidad. En esta galería no solo encontrarás obras, sino también <strong>manifiestos visuales</strong>: carteles que movilizaban masas, diseños textiles que vestían al nuevo ciudadano y proyectos arquitectónicos que soñaban con ciudades futuras.</p>
+                <p>Te invitamos a explorar estas piezas no como simples imágenes, sino como artefactos de un tiempo de cambio radical. Presta atención a su <strong>lenguaje visual</strong>: el uso audaz de la diagonal, la tipografía como protagonista y el fotomontaje como herramienta para documentar y transformar el mundo.</p>
+            </div>
             <div class="gallery-grid">
-                <!-- Fila 1 -->
-                <div class="gallery-item">
-                    <a href="img/galeria/01.jpg" data-lightbox="constructivismo-gallery" data-title="Cartel soviético de propaganda política (1920s) <br> Afiche con fuerte carga simbólica y estética constructivista, donde una figura central domina la composición con rostro dividido cromáticamente. El uso del rojo y la geometría enfatiza el poder del mensaje político.">
-                        <img src="img/galeria/01.jpg" alt="Cartel soviético de propaganda política (1920s)">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Torre de Tatlin (Monumento a la Tercera Internacional, 1920)</h3>
-                        <p>Diseño arquitectónico utópico creado por Vladimir Tatlin como símbolo del progreso revolucionario. La torre, de estructura helicoidal y materiales industriales, estaba pensada para alcanzar 400 metros de altura y albergar oficinas gubernamentales giratorias. Representa la fusión entre arte, ingeniería y política.</p>
-                        <p><strong>Dato curioso:</strong> Aunque nunca se construyó, la Torre de Tatlin se convirtió en un ícono del constructivismo. Su diseño incluía tres niveles giratorios: uno diario, uno mensual y uno anual, simbolizando el dinamismo del nuevo orden soviético.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/02.jpg" data-lightbox="constructivismo-gallery" data-title="Torre de Shújov: ingeniería y estética constructivista <br> Estructura metálica diseñada por Vladímir Shújov, ejemplo paradigmático de cómo el constructivismo integró la ingeniería moderna con la estética funcional.">
-                        <img src="img/galeria/02.jpg" alt="Torre de Shújov: ingeniería y estética constructivista">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Casa Melnikov (1927–1929)</h3>
-                        <p>Vivienda experimental diseñada por el arquitecto Konstantin Melnikov en Moscú. Compuesta por dos cilindros intersectados, con una fachada perforada por ventanas hexagonales, representa una visión única dentro del constructivismo arquitectónico. Aunque funcional, su diseño también refleja una fuerte carga simbólica y estética.</p>
-                        <p><strong>Dato curioso:</strong> A pesar de su apariencia futurista, la Casa Melnikov fue construida sin apoyo estatal. Melnikov la diseñó como su casa-estudio, y vivió allí hasta su muerte. Hoy es considerada una obra maestra de la arquitectura de vanguardia soviética.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/03.jpeg" data-lightbox="constructivismo-gallery" data-title="Cartel de Dobrolet: modernización aérea soviética <br> Afiche promocional de la aerolínea estatal Dobrolet, que refleja el impulso constructivista por industrializar y conectar el territorio soviético.">
-                        <img src="img/galeria/03.jpeg" alt="Cartel de Dobrolet: modernización aérea soviética">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Diseño de uniformes deportivos por Varvara Stepanova</h3>
-                        <p>Bocetos de indumentaria deportiva con patrones geométricos y colores contrastantes.</p>
-                        <p><strong>Dato curioso:</strong> Stepanova aplicó los principios del constructivismo al diseño textil, buscando democratizar la moda y adaptarla a la vida activa del ciudadano soviético.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/04.jpg" data-lightbox="constructivismo-gallery" data-title="Arquitectura constructivista: funcionalismo y geometría <br> Fotografía de un edificio modernista con formas geométricas puras y grandes ventanales. Representa los ideales constructivistas de funcionalidad, racionalidad y ruptura con la ornamentación clásica.">
-                        <img src="img/galeria/04.jpg" alt="Arquitectura constructivista: funcionalismo y geometría">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3> "Golpea a los blancos con la cuña roja" (El Lissitzky, 1920)</h3>
-                        <p>Obra icónica del constructivismo político, donde una cuña roja penetra un círculo blanco, simbolizando la victoria bolchevique.</p>
-                        <p><strong>Dato curioso:</strong> Esta imagen se convirtió en un símbolo visual de la Revolución, y su simplicidad geométrica la hizo fácilmente reproducible en múltiples formatos.</p>
-                    </div>
-                </div>
+    <div class="gallery-item" data-category="arquitectura">
+        <img src="img/galeria/01.jpg" alt="Monumento a la Tercera Internacional de Tatlin">
+        <div class="overlay">
+            <div class="overlay-title">Monumento a la Tercera Internacional (Torre de Tatlin)</div>
+            <div class="overlay-description">
+                Diseño utópico de Vladimir Tatlin (1919) para la sede del Komintern. Concebida como una fusión de arquitectura, escultura y propaganda, su estructura de hierro y acero contrastaba con los monumentos de piedra del pasado.
+                <br><br><strong>Análisis y Significado:</strong> La torre es un símbolo del dinamismo revolucionario. Sus tres niveles giratorios (diario, mensual y anual) representaban la velocidad del nuevo orden soviético. Su estructura expuesta y materiales industriales celebraban la ingeniería y la producción, rechazando la ornamentación burguesa.
+                <br><br><strong>Dato curioso:</strong> Aunque nunca se construyó a su escala original de 400 metros, su diseño influyó a generaciones de arquitectos y se convirtió en un ícono global de la arquitectura de vanguardia.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="arquitectura">
+        <img src="img/galeria/02.jpg" alt="Casa Melnikov en Moscú">
+        <div class="overlay">
+            <div class="overlay-title">Casa Melnikov</div>
+            <div class="overlay-description">
+                Vivienda y estudio experimental del arquitecto Konstantin Melnikov (1929). Compuesta por dos cilindros de ladrillo intersectados y perforada por casi 60 ventanas hexagonales, es una obra maestra de la vanguardia.
+                <br><br><strong>Análisis y Significado:</strong> El diseño maximiza el espacio y la luz en un lote pequeño. Las ventanas hexagonales distribuyen la luz de manera uniforme, mientras que la planta abierta y la ausencia de muros de carga internos permitían una flexibilidad espacial revolucionaria para la época. Los cilindros simbolizaban la unión del arquitecto y su familia.
+                <br><br><strong>Dato curioso:</strong> Fue una de las pocas residencias privadas construidas en la URSS durante esa era. Melnikov la financió con el dinero que ganó al diseñar el Pabellón Soviético para la Exposición de París de 1925.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="diseño">
+        <img src="img/galeria/03.jpeg" alt="Diseños textiles de Varvara Stepanova">
+        <div class="overlay">
+            <div class="overlay-title">Diseños Textiles de Stepanova</div>
+            <div class="overlay-description">
+                Bocetos de indumentaria ("prodezodezhda" o ropa de producción) de Varvara Stepanova. Los patrones geométricos no eran meramente decorativos, sino que buscaban enfatizar el movimiento del cuerpo y la funcionalidad de la prenda.
+                <br><br><strong>Análisis y Significado:</strong> Stepanova quería liberar al cuerpo de las restricciones de la moda burguesa. Sus diseños, pensados para la producción en masa, eran unisex, funcionales y adaptados a la vida activa del nuevo ciudadano soviético, tanto en la fábrica como en el campo de deportes.
+                <br><br><strong>Dato curioso:</strong> Muchos de sus diseños más audaces fueron creados para la Primera Fábrica Estatal de Textiles de Moscú, aplicando los principios del arte constructivista directamente a la producción industrial.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="cartelismo">
+        <img src="img/galeria/04.jpg" alt="Obra 'Golpea a los blancos con la cuña roja' de El Lissitzky">
+        <div class="overlay">
+            <div class="overlay-title">Golpea a los blancos con la cuña roja</div>
+            <div class="overlay-description">
+                Litografía de El Lissitzky (1920) que se convirtió en un poderoso símbolo de la Guerra Civil Rusa. Es un ejemplo perfecto de cómo el arte abstracto podía ser utilizado con fines políticos directos y claros.
+                <br><br><strong>Análisis y Significado:</strong> La composición utiliza un lenguaje visual universal. La cuña roja (los bolcheviques) penetra de forma dinámica y agresiva en el círculo blanco (el Movimiento Blanco contrarrevolucionario), desestabilizando su orden. La diagonal crea una sensación de movimiento y victoria inevitable.
+                <br><br><strong>Dato curioso:</strong> Esta obra es considerada un "Proun" (Proyecto para la Afirmación de lo Nuevo), un concepto de Lissitzky que exploraba la transición entre la pintura y la arquitectura.
+            </div>
+        </div>
+    </div>
 
-                <!-- Fila 2 -->
-                <div class="gallery-item">
-                    <a href="img/galeria/05.jpg" data-lightbox="constructivismo-gallery" data-title="Revista del Frente Izquierdo de las Artes (LEF) <br> Portada de la revista &quot;Журнал Левого Фронта Искусств&quot;, órgano de difusión del grupo LEF, que promovía el arte como herramienta revolucionaria.">
-                        <img src="img/galeria/05.jpg" alt="Revista del Frente Izquierdo de las Artes (LEF)">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Afiche soviético de cine – Hermanos Stenberg (década de 1920)</h3>
-                        <p>Los hermanos Georgii y Vladimir Stenberg revolucionaron el diseño de afiches cinematográficos en la Unión Soviética. Sus carteles combinaban fotomontaje, tipografía audaz, diagonales extremas y distorsiones visuales para captar la atención del espectador. Este estilo rompía con la simetría clásica y reflejaba el dinamismo del cine moderno.</p>
-                        <p><strong>Dato curioso:</strong> Los Stenberg diseñaron más de 300 afiches de películas entre 1923 y 1933. Muchos de ellos eran más impactantes que las propias películas, y se imprimían en tiradas limitadas, lo que los convirtió en piezas de colección.
+    <div class="gallery-item" data-category="cartelismo">
+        <img src="img/galeria/05.jpg" alt="Afiche cinematográfico de los hermanos Stenberg">
+        <div class="overlay">
+            <div class="overlay-title">Afiche de Cine - Hermanos Stenberg</div>
+            <div class="overlay-description">
+                Los hermanos Georgii y Vladimir Stenberg revolucionaron el diseño de afiches cinematográficos. Sus obras se caracterizan por el fotomontaje, perspectivas distorsionadas, diagonales extremas y una tipografía dinámica.
+                <br><br><strong>Análisis y Significado:</strong> Los Stenberg utilizaban técnicas del propio cine, como el primer plano, el montaje y el movimiento, para crear sus carteles. Su objetivo era capturar la esencia de la película en una sola imagen impactante y moderna que atrajera al público.
+                <br><br><strong>Dato curioso:</strong> Para lograr sus perspectivas únicas, a menudo proyectaban fotogramas de la película sobre el papel en ángulos extraños y luego los redibujaban, una técnica muy innovadora para la época.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="cartelismo">
+        <img src="img/galeria/06.jpg" alt="Cartel de la aerolínea Dobrolet por Alexander Rodchenko">
+        <div class="overlay">
+            <div class="overlay-title">Propaganda de Dobrolet</div>
+            <div class="overlay-description">
+                Afiche publicitario de Alexander Rodchenko (1923) para la aerolínea estatal Dobrolet. Es un ejemplo paradigmático de cómo el constructivismo se puso al servicio de la modernización del estado soviético.
+                <br><br><strong>Análisis y Significado:</strong> El diseño es directo y funcional. La tipografía en bloque no solo informa, sino que "construye" el mensaje. El avión estilizado y la composición diagonal transmiten progreso, velocidad y tecnología, invitando a los ciudadanos a invertir en el futuro aéreo del país.
+                <br><br><strong>Dato curioso:</strong> El texto dice: "Aquel que no es accionista de Dobrolet no es un ciudadano de la URSS". Un eslogan potente que fusiona consumo, patriotismo y modernidad.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="cartelismo">
+        <img src="img/galeria/07.jpg" alt="Cartel de la revista 'Molodaya Gvardiya'">
+        <div class="overlay">
+            <div class="overlay-title">Revista Joven Guardia (Molodaya Gvardiya)</div>
+            <div class="overlay-description">
+                Cartel promocional de la revista oficial del Komsomol, la organización juvenil del Partido Comunista. El diseño buscaba inspirar y movilizar a la juventud soviética.
+                <br><br><strong>Análisis y Significado:</strong> El uso de figuras humanas estilizadas y colores planos hacía que el mensaje fuera claro y directo. La composición ascendente y las miradas idealizadas de los jóvenes transmiten optimismo, energía y devoción a la causa revolucionaria.
+                <br><br><strong>Dato curioso:</strong> Artistas como Rodchenko y otros constructivistas colaboraron frecuentemente con estas publicaciones, creyendo que el diseño gráfico era una herramienta pedagógica y política de primer orden.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="arquitectura">
+        <img src="img/galeria/08.jpg" alt="Casa de la Cultura Zúyev en Moscú">
+        <div class="overlay">
+            <div class="overlay-title">Casa de la Cultura Zúyev</div>
+            <div class="overlay-description">
+                Diseñado por Ilya Golosov (1927), este edificio es un "club de trabajadores", un tipo de "condensador social" destinado a la educación y el ocio del proletariado.
+                <br><br><strong>Análisis y Significado:</strong> La composición se basa en el contraste de volúmenes: un bloque rectangular intersectado por un cilindro de vidrio monumental que alberga la escalera principal. Esta fachada transparente simbolizaba la accesibilidad y la modernidad de la nueva sociedad.
+                <br><br><strong>Dato curioso:</strong> Los clubes de trabajadores eran un elemento central de la política cultural soviética, diseñados para reemplazar espacios de ocio "burgueses" como iglesias y tabernas.
+            </div>
+        </div>
+    </div>
 
-</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/06.jpg" data-lightbox="constructivismo-gallery" data-title="Cartel de la revista &quot;Molodaya Gvardiya&quot; <br> Afiche de la publicación juvenil &quot;Молодая Гвардия&quot;, con figura estilizada en actitud de acción.">
-                        <img src="img/galeria/06.jpg" alt="Cartel de la revista &quot;Molodaya Gvardiya&quot;">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Propaganda soviética de Dobrolet (1923)</h3>
-                        <p>Afiche promocional de la aerolínea estatal Dobrolet, creada para impulsar la aviación civil en la Unión Soviética. El diseño utiliza elementos constructivistas como tipografía en bloque, composición diagonal y un avión estilizado que simboliza el progreso tecnológico.</p>
-                        <p><strong>Dato curioso:</strong> Dobrolet fue fundada como una empresa cooperativa, y sus afiches invitaban a los ciudadanos a invertir en acciones para desarrollar la flota aérea soviética. Esta campaña fue una de las primeras en combinar arte de vanguardia con objetivos económicos estatales.
-
-</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/07.jpg" data-lightbox="constructivismo-gallery" data-title="Publicidad editorial de Lengiz: arte al servicio de la lectura <br> Cartel de la editorial estatal Lengiz, donde una figura grita a través de una forma geométrica que simula un megáfono.">
-                        <img src="img/galeria/07.jpg" alt="Publicidad editorial de Lengiz: arte al servicio de la lectura">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Afiche “Lea la revista Joven Guardia” (Молодая Гвардия, años 1920)</h3>
-                        <p>Cartel promocional de la revista soviética Molodaya Gvardiya, dirigido a la juventud revolucionaria. El diseño utiliza colores planos, figuras humanas estilizadas y tipografía constructivista para transmitir energía, acción y compromiso ideológico.</p>
-                        <p><strong>Dato curioso:</strong> La revista fue una herramienta clave para formar políticamente a los jóvenes soviéticos. Muchos de sus afiches eran diseñados por artistas constructivistas como Rodchenko, quienes buscaban que el mensaje fuera directo, reproducible y visualmente poderoso.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/08.jpg" data-lightbox="constructivismo-gallery" data-title="Portadas de la revista LEF: vanguardia tipográfica <br> Ejemplos de diseño editorial de la revista LEF, con uso experimental de la tipografía y composición asimétrica.">
-                        <img src="img/galeria/08.jpg" alt="Portadas de la revista LEF: vanguardia tipográfica">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Casa de la Cultura Zúyev (1927–1929)</h3>
-                        <p>Edificio diseñado por el arquitecto Ilya Golosov en Moscú, destinado a actividades culturales y educativas para trabajadores. Su forma cilíndrica con fachada de vidrio y volúmenes geométricos representa una síntesis entre funcionalidad y expresión constructivista.</p>
-                        <p><strong>Dato curioso:</strong>  La estructura cilíndrica del frente no solo era estética: servía como espacio de circulación vertical. El edificio se convirtió en un ícono de la arquitectura soviética por su audaz uso de formas puras y su enfoque en la utilidad social del arte.</p>
-                    </div>
-                </div>
-
-                <!-- Fila 3 -->
-                <div class="gallery-item">
-                    <a href="img/galeria/09.jpeg" data-lightbox="constructivismo-gallery" data-title="&quot;Golpea a los blancos con la cuña roja&quot; (El Lissitzky, 1920) <br> Obra icónica del constructivismo político, donde una cuña roja penetra un círculo blanco, simbolizando la victoria bolchevique.">
-                        <img src="img/galeria/09.jpeg" alt="&quot;Golpea a los blancos con la cuña roja&quot; (El Lissitzky, 1920)">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Revista LEF – Frente Izquierdo de las Artes (1923–1925)</h3>
-                        <p>Publicación vanguardista soviética que reunía a artistas, escritores y diseñadores comprometidos con la idea de que el arte debía servir a la revolución. LEF promovía el abandono del arte burgués y la creación de formas nuevas, funcionales y colectivas. Sus portadas y diseño editorial reflejan la estética constructivista: tipografía audaz, composición asimétrica y uso de fotomontaje.</p>
-                        <p><strong>Dato curioso:</strong> Entre sus colaboradores estuvieron Vladimir Mayakovsky, Alexander Rodchenko y El Lissitzky. La revista tuvo una segunda etapa como Novy LEF (Nuevo LEF), y fue clave en la difusión de ideas sobre arte utilitario, diseño gráfico y poesía visual.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/10.jpeg" data-lightbox="constructivismo-gallery" data-title="Diseño de uniformes deportivos por Varvara Stepanova <br> Bocetos de indumentaria deportiva con patrones geométricos y colores contrastantes.">
-                        <img src="img/galeria/10.jpeg" alt="Diseño de uniformes deportivos por Varvara Stepanova">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Afiche para la editorial Lengiz – Alexander Rodchenko (1924)</h3>
-                        <p>Cartel icónico creado por Rodchenko para promocionar libros de la editorial estatal Lengiz. Muestra una figura gritando dentro de una forma geométrica que simula un megáfono, acompañado por tipografía en bloque y colores planos. El diseño transmite urgencia, energía y claridad, alineado con los principios del constructivismo.</p>
-                        <p><strong>Dato curioso:</strong> Rodchenko usó solo tres colores en este afiche: rojo, negro y blanco, siguiendo su idea de que el diseño debía ser funcional y económico. La imagen se convirtió en símbolo del arte como herramienta de comunicación masiva.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/11.gif" data-lightbox="constructivismo-gallery" data-title="Fachada con ventanas hexagonales y mensaje gráfico <br> Imagen de una estructura arquitectónica con módulos hexagonales y letras rojas formando &quot;SOS&quot;.">
-                        <img src="img/galeria/11.gif" alt="Fachada con ventanas hexagonales y mensaje gráfico">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Rodchenko usó solo tres colores en este afiche: rojo, negro y blanco, siguiendo su idea de que el diseño debía ser funcional y económico. La imagen se convirtió en símbolo del arte como herramienta de comunicación masiva.</h3>
-                        <p>Segunda etapa de la revista LEF, dirigida por Vladimir Mayakovsky. Novyi LEF profundizó la idea de que el arte debía estar al servicio de la producción y la ideología soviética. Su diseño editorial mantuvo la estética constructivista: uso de fotomontajes, tipografía experimental y composiciones asimétricas.</p>
-                        <p><strong>Dato curioso:</strong> En Novyi LEF, Rodchenko y Stepanova exploraron nuevas formas de diseño gráfico aplicadas a libros, revistas y publicidad. La revista también incluyó debates sobre el rol del artista en la sociedad socialista, convirtiéndose en un espacio de reflexión crítica dentro de la vanguardia.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <a href="img/galeria/12.webp" data-lightbox="constructivismo-gallery" data-title="Espacio expositivo con estructura espiral <br> Sala de exhibición con escultura metálica en espiral, acompañada de pancartas en ruso.">
-                        <img src="img/galeria/12.webp" alt="Espacio expositivo con estructura espiral">
-                    </a>
-                    <div class="gallery-item-info">
-                        <h3>Torre de Shújov – Ingeniería y arte constructivista (1896–1922)</h3>
-                        <p>Estructura hiperbólica diseñada por el ingeniero ruso Vladímir Shújov. Aunque anterior al auge del constructivismo, su diseño influenció profundamente a los arquitectos del movimiento por su combinación de eficiencia estructural y estética geométrica. La torre está compuesta por una red metálica en forma de hiperboloide, que permite gran estabilidad con poco material.</p>
-                        <p><strong>Dato curioso:</strong> Shújov desarrolló esta técnica para torres de transmisión y chimeneas industriales. Su método de construcción sin grúas, ensamblando desde arriba hacia abajo, fue revolucionario y sirvió de inspiración para proyectos como la Torre de Tatlin.</p>
-                    </div>
-                </div>
+    <div class="gallery-item" data-category="diseño">
+        <img src="img/galeria/09.jpeg" alt="Portada de la revista LEF">
+        <div class="overlay">
+            <div class="overlay-title">Revista LEF (Frente de Izquierda de las Artes)</div>
+            <div class="overlay-description">
+                Publicación de vanguardia (1923-1925) que fue el principal órgano de debate del constructivismo. LEF argumentaba que el arte debía abandonar su pedestal y convertirse en una herramienta para la construcción del socialismo.
+                <br><br><strong>Análisis y Significado:</strong> LEF promovía la "factografía" (arte basado en hechos) y el "arte de producción". El fotomontaje, la tipografía funcional y el diseño gráfico eran sus principales armas contra la pintura de caballete tradicional, considerada individualista y burguesa.
+                <br><br><strong>Dato curioso:</strong> El grupo incluía a figuras como Vladimir Mayakovsky (poesía), Alexander Rodchenko (diseño), Dziga Vértov (cine) y Sergei Eisenstein (cine).
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="cartelismo">
+        <img src="img/galeria/10.jpeg" alt="Afiche editorial 'Libros' por Alexander Rodchenko">
+        <div class="overlay">
+            <div class="overlay-title">Afiche Editorial Lengiz ("¡Libros!")</div>
+            <div class="overlay-description">
+                Fotomontaje icónico de Alexander Rodchenko (1924) para la editorial estatal Lengiz. La figura que grita es Lilya Brik, una de las musas de la vanguardia rusa.
+                <br><br><strong>Análisis y Significado:</strong> Este cartel es la síntesis del constructivismo: el fotomontaje como medio "real" y moderno, la tipografía como elemento estructural y un mensaje social claro (promover la lectura y la alfabetización). La composición diagonal y los colores primarios crean un impacto visual inmediato.
+                <br><br><strong>Dato curioso:</strong> Rodchenko defendía el fotomontaje sobre el dibujo porque creía que la cámara era una herramienta objetiva, una "extensión del ojo humano" ideal para representar la nueva realidad soviética.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="diseño">
+        <img src="img/galeria/11.gif" alt="Portada de la revista 'Novyi LEF'">
+        <div class="overlay">
+            <div class="overlay-title">Revista Novyi LEF (Nuevo LEF)</div>
+            <div class="overlay-description">
+                Segunda etapa de la revista LEF (1927-1928), que profundizó su compromiso con el documentalismo y la "literatura del hecho". El diseño, a cargo de Rodchenko y Stepanova, priorizó la fotografía y el diseño editorial limpio y funcional.
+                <br><br><strong>Análisis y Significado:</strong> Novyi LEF defendía que la fotografía y el cine eran las formas artísticas del proletariado, capaces de capturar la vida "tal como es". Sus portadas son lecciones de diseño gráfico moderno, utilizando la imagen y la tipografía con una precisión casi arquitectónica.
+                <br><br><strong>Dato curioso:</strong> En esta etapa, el grupo se volvió más crítico con las políticas culturales del Estado, lo que eventualmente llevó a su disolución.
+            </div>
+        </div>
+    </div>
+    <div class="gallery-item" data-category="arquitectura">
+        <img src="img/galeria/12.webp" alt="Torre de Shújov en Moscú">
+        <div class="overlay">
+            <div class="overlay-title">Torre de Shújov</div>
+            <div class="overlay-description">
+                Torre de radiodifusión en Moscú (1922) diseñada por el ingeniero Vladimir Shújov. Aunque técnicamente es una obra de ingeniería, su estructura hiperboloide fue una gran inspiración para el constructivismo.
+                <br><br><strong>Análisis y Significado:</strong> La torre es un prodigio de eficiencia estructural. Su celosía de acero crea una estructura increíblemente ligera y resistente con un mínimo de material, un principio ("economía de material") que los constructivistas adoptaron como un ideal estético y político.
+                <br><br><strong>Dato curioso:</strong> Su método de construcción fue revolucionario: la torre se ensambló en secciones telescópicas en el suelo y luego se izó, demostrando un ingenio que fascinó a la vanguardia artística.
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+            <div class="cta-gallery-artistas">
+                <img src="img/un visionario.png" alt="Icono de un visionario">
+                <h3>Detrás de Cada Obra, un Visionario</h3>
+                <p>Ahora que has explorado el impacto visual del constructivismo, conoce a las mentes maestras que lo hicieron posible. Descubre las historias y las ideas de los artistas que se atrevieron a diseñar el futuro.</p>
+                <a href="artistas.html" class="cta-button-gallery">Descubre a los Artistas →</a>
             </div>
         </section>  
     </main>
@@ -182,9 +197,14 @@
         </div>
     </footer>
 
-    <div id="custom-lightbox" class="lightbox-overlay">
-        <span class="close-btn">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+    <!-- Lightbox Modal -->
+    <div id="gallery-lightbox" class="lightbox-overlay">
+        <div class="lightbox-container">
+            <span class="close-btn">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-description"></p>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
